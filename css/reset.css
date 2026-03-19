@@ -1,0 +1,25 @@
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+ul, ol {
+  list-style: none;
+}
+
+hr {
+  border-color: #DDDDDD;
+}
+
+#bookoa_blue {
+  color: #237AF6;
+}
+
+#bookoa_red {
+  color: #E14F4F;
+}
+
+#bookoa_gray {
+  color: #6F6F6F;
+}

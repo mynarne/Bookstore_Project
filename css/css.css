@@ -1,0 +1,438 @@
+/* header */
+
+header {
+    width: 100%;
+    height: 250px;
+}
+
+
+/* ------------------------------------------ header top ---------------------------------------------------- */
+
+
+/* header top */
+#header_top {
+    width: 100%;
+    height: 36px;
+    background-color: #237AF6;
+}
+
+/* header top content */
+#header_top_content {
+    width: 1140px;
+    height: 36px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* header top navigation */
+#ht_nav {
+    width: 620px;
+    height: 36px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ht_nav ul */
+#ht_nav ul {
+    display: flex;
+    color: white;
+    font-family: bold;
+    font-size: 11px;
+    
+}
+
+/* ht_nav ul li */
+#ht_nav ul li {
+    margin: 0 11px;
+}
+
+#ht_nav ul li a {
+    color: white;
+    font-weight: 590;
+    font-size: 12px;
+
+    text-decoration: none;
+
+}
+
+
+/* ------------------------------------------- header bottom ----------------------------------------------------- */
+
+
+/* header bottom */
+#header_bottom {
+    width: 1140px;
+    height: 160px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* 로고 */
+#logo {
+    width: 255px;
+    height: 61px;
+    
+}
+
+/* header bottom 검색창 */
+#hb_search {
+    width: 620px;
+    height: 61px;
+    
+
+    background-color: aquamarine;
+}
+
+/* header bottom 회원수 */
+#hb_member {
+    width: 235px;
+    height: 76px;
+    
+
+    background-color: aliceblue;
+}
+
+
+/* ----------------------------------- 메인 메뉴 및 실시간 검색어 -------------------------------------------------- */
+
+
+.main_menu_realtimesearch {
+    width: 1140px;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+/* 메인 메뉴 */
+.main_menu {
+    width: 730px;
+    height: 50px;
+    align-content: center;
+}
+
+.main_menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main_menu ul li a {
+    color: #237AF6;
+    text-decoration: none;
+}
+
+#priceCorner {
+    color: #E14F4F;
+}
+
+/* 실시간 검색어 */
+.realtimesearch {
+    width: 170px;
+    height: 50px;
+
+    background-color: lightgoldenrodyellow;
+}
+
+
+/* --------------------------------------------- section ------------------------------------------------------- */
+
+
+/* main */
+section {
+    width: 100%;
+    height: 2715px;
+}
+
+/* ---------------------------------------------- section silder --------------------------------------------------- */
+
+
+
+/* 메인 배너 */
+#slider {
+    width: 1140px;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+
+    background-color: #237AF6;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* -------------------------------------------- section new book ----------------------------------------------- */
+
+
+/* background_color용 별 기능x*/
+.new_book_main_background {
+    background-color: #FAFAFA;
+    width: 100%;
+    height: 400px;
+}
+
+/* 새로 등록된 도서 */
+.new_book_main {
+    width: 1140px;
+    height: 400px;
+    margin: 0 auto;
+    margin-bottom: 47px;
+}
+
+/* 새로 등록된 도서 제목, 메뉴, 더보기 */
+.new_book_menu {
+    width: 1140px;
+    height: 98px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 새로 등록된 도서 메뉴 */
+#nbm_nav {
+    width: 500px;
+    height: 36px;
+    margin-left: 30px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#nbm_nav ul {
+    display: flex;
+    margin-left: 5px;
+}
+
+#nbm_nav ul li {
+    margin: 0 9px;
+}
+
+.new_book_menu a {
+    text-decoration: none;
+}
+
+
+/* -------------------------------------------- new book content ----------------------------------------------- */
+
+
+/* 새로 등록된 도서 책 모음 */
+.new_book_content {
+    width: 1140px;
+    height: 302px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* 새로 등록된 도서 책 개별 */
+#new_book {
+    width: 130px;
+    height: 176px;
+
+    background-color: yellowgreen;
+}
+
+
+/* --------------------------------------------- price book certi store ------------------------------------------------ */
+
+
+/* 가격대별 코너 , 인증서점*/
+.price_book_certi_store {
+    width: 1140px;
+    height: 1063px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* -------------------------------------------------- 가격대별 코너 -------------------------------------------------*/
+.price_book_corner {
+    width: 762px;
+    height: 1016px;
+    background-color: aquamarine;
+}
+
+.price_book_menu {
+    width: 762px;
+    height: 68px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price_book_content {
+    width: 762px;
+    height: 948px;
+}
+
+.price_book {
+    width: 130px;
+    height: 176px;
+}
+
+/* ------------------------------------------------------ 인증서점 ---------------------------------------------- */
+.certi_store_corner{
+    width: 320px;
+    height: 945px;
+    background-color: lightcyan;
+}
+
+.certi_store_menu {
+    width: 320px;
+    height: 68px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.certi_store_content {
+    width: 320px;
+    height: 877px;
+}
+
+.certi_store {
+    width: 320px;
+    height: 140px;
+}
+
+.certi_store_profile {
+    width: 84px;
+    height: 84px;
+    border-radius: 100px;
+
+    background-color: #237AF6;
+}
+
+
+/* ---------------------------------------------- 공지사항 이벤트 ---------------------------------------------------- */
+
+
+/* 공지사항, 이벤트 */
+.notice_event {
+    width: 1417px;
+    height: 397px;
+}
+
+
+/* ------------------------------------------------- footer -------------------------------------------------- */
+
+
+/* footer */
+
+footer {
+    width: 100%;
+    height: 170px;
+    padding: 20px 0;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #343C47;
+}
+
+/* footer content 전체 집합 */
+.footer_content_main {
+    width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* -------------------------------- footer content 좌측 (리스트, 회사정보) --------------------------------------------- */
+.footer_content_left {
+    flex: 1;
+}
+
+footer ul {
+    margin-bottom: 5px;
+    
+    display: flex;
+    justify-content: start;
+    color: #eee;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.footer_content_left ul li {
+    margin-right: 3px;
+}
+
+.footer_content_left p {
+    max-width: 762px;
+    max-height: 63px;
+    color: #9E9E9E;
+    font-size: 12px;
+}
+
+.footer_content_left p span {
+    font-weight: 550;
+    color: #eee;
+}
+
+/* ------------------------------------- footer content 우측 (고객센터) -------------------------------------------------- */
+.footer_content_right {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.footer_content_right p {
+    align-self: flex-start;
+    font-size: 15px;
+    color: #eee;
+    padding-right: 10px;
+}
+
+/* 고객센터, 상담시간 안내 버튼 */
+.tel_cuns {
+    display: flex;
+    justify-content: space-between, center;
+}
+
+#tel {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    font-size: 27px;
+    font-weight: bold;
+    color: #8DFF83;
+    
+}
+
+.cuns_btn {
+    margin-left: 10px;
+    background: transparent;
+    border: 2px solid #eee;
+    color: #eee;
+    font-size: 13px;
+    padding: 0 6px;
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>국내 최대 온라인 서점 플랫폼</title> -->
+    <title>북코아</title>
+    <link rel="icon" href="./img/icon.png">
+    <link rel="stylesheet" href="./css/css.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+</head>
+<body>
+
+    <header>
+        <!-- header top -->
+        <div id = 'header_top'>
+            <div id = 'header_top_content'>
+                <!-- header top navigation -->
+                <nav id = 'ht_nav'>
+                    <ul>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">1:1 문의</a></li>
+                        <li><a href="#">개발자 문의</a></li>
+                        <li><a href="#">매입요청</a></li>
+                        <li><a href="#">도서요청</a></li>
+                        <li><a href="#">마이페이지</a></li>
+                        <li><a href="#">장바구니</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- header bottom -->
+        <div id = 'header_bottom'>
+            <!-- logo -->
+             <div>
+                <img id = 'logo' src="./img/bold.svg">
+             </div>
+            
+            <!-- header bottom search -->
+            <div id = 'hb_search'>
+
+            </div>
+
+            <!-- header bottom 회원수 -->
+            <div id = 'hb_member'>
+
+            </div>
+        </div>
+
+        <!-- 메뉴, 실검 -->
+        <div class = 'main_menu_realtimesearch'>
+            <!-- 메뉴 -->
+            <div class = 'main_menu'>
+                <ul>
+                    <li><a href = "#">분야찾기</a></li>
+                    <li><a href = "#" id="bookoa_red">가격대별코너</a></li>
+                    <li><a href = "#">이벤트</a></li>
+                    <li><a href = "#">인증서점</a></li>
+                    <li><a href = "#">나의서점</a></li>
+                </ul>
+            </div>
+
+            <!-- 실검 -->
+            <div class = 'realtimesearch'>
+
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <!-- 배너 -->
+        <div>
+            <div id = 'slider'>
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 새로 등록된 도서 -->
+        <div class = 'new_book_main_background'>
+            <div class = 'new_book_main'>
+                <!-- 새로 등록된 도서 메뉴 -->
+                <div class = 'new_book_menu'>
+                    <h2>새로 등록된 도서</h2>
+                    <nav id = 'nbm_nav'>
+                        <ul>
+                            <li><a href = "#" id = "bookoa_gray">소설</a></li>
+                            <li><a href = "#" id = "bookoa_gray">문학/인물</a></li>
+                            <li><a href = "#" id = "bookoa_gray">만화</a></li>
+                            <li><a href = "#" id = "bookoa_gray">종교</a></li>
+                            <li><a href = "#" id = "bookoa_gray">고서/희귀본</a></li>
+                        </ul>
+                    </nav>
+                    <a href = "#" class = "more_view" id = "bookoa_gray">더보기</a>
+                </div>
+                
+
+                <!-- 새로 등록된 도서 컨텐츠 -->
+                <div class = 'new_book_content'>
+                    <!-- 새로 등록된 도서 종류 -->
+                    <div id = 'new_book'>
+                    </div>
+                    <div id = 'new_book'></div>
+                    <div id = 'new_book'></div>
+                    <div id = 'new_book'></div>
+                    <div id = 'new_book'></div>
+                    <div id = 'new_book'></div>
+                    <div id = 'new_book'></div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- 가격대별 코너, 인증서점 -->
+        <div class = 'price_book_certi_store'>
+            <!-- 가격대별 코너 -->
+            <div class = 'price_book_corner'>
+                <!-- 가격대별 코너 제목, 메뉴, 더보기 -->
+                <div class = 'price_book_menu'>
+                    <h2>가격대별 코너</h2>
+                    <nav id = 'pbm_nav'>
+                        <ul>
+                            <li><a href = "#">1천원대</a></li>
+                            <li><a href = "#">2천원대</a></li>
+                            <li><a href = "#">3천원대</a></li>
+                            <li><a href = "#">4천원대</a></li>
+                            <li><a href = "#">5천원대</a></li>
+                        </ul>
+                    </nav>
+                    <a href = "#" class = "more_view" id="bookoa_gray">더보기</a>
+                </div>
+                <!-- 책 종류 -->
+                <div>
+
+                </div>
+            </div>
+
+            <!-- 인증서점 -->
+            <div class = 'certi_store_corner'>
+                <!-- 인증서점 제목, 메뉴, 더보기-->
+                <div></div>
+                <!-- 서점 종류 -->
+                <div></div>
+            </div>
+        </div>
+
+        <!-- 공지사항, 이벤트, 특사모 배너 -->
+        <div>
+            <!-- 공지사항 -->
+            <div></div>
+            <!-- 이벤트 -->
+            <div></div>
+            <!-- 특사모 배너 -->
+            <div></div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class = 'footer_content_main'>
+            <div class = 'footer_content_left'>
+                <ul>
+                    <li>회사소개</li>
+                    <li>|</li>
+                    <li>개인정보취급방침</li>
+                    <li>|</li>
+                    <li>이용약관</li>
+                    <li>|</li>
+                    <li>고객센터</li>
+                </ul>
+
+                <p>
+                    Copyright 2022 북코아. All rights reserverd <span>[사업자정보]</span> 대표전화 : 1544-2949 | 대표 : 박재용 | 개인정보 보호책임자 : 박재용 사업자 등록번호 : 257-08-02667 | 통신판매업 신고번호 : 제 2024-인천남동구-0150호. 인천시 남동구 남동대로 709, 4층(구월동,보광빌딩) | Email : help@bookoa.com
+                </p>
+            </div>
+            <div class = 'footer_content_right'>
+                <p>고객만족센터</p>
+                <div class = 'tel_cuns'>
+                    <p id ='tel'>1544-2949</p>
+                    <button type = "button" class = "cuns_btn">상담시간 안내</button>
+                </div>
+            </div>
+        </div>
+        
+
+    </footer>
+
+    <script href = './javascript/js.js'></script>
+    <!-- Swiper JS -->
+    <script href = './javascript/swiper.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+</body>
+</html>
