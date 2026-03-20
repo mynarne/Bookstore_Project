@@ -38,36 +38,88 @@
         <div id = 'header_bottom'>
             <!-- logo -->
              <div>
-                <img id = 'logo' src="./img/bold.svg">
+                <a href = "index.html"><img id = 'logo' src="./img/bold.svg"></a>
              </div>
             
             <!-- header bottom search -->
             <div id = 'hb_search'>
-
+                <select id = "search_category">
+                    <option value="all">통합검색</option>
+                    <option value="title">도서명</option>
+                    <option value="author">저자명</option>
+                    <option value="publisher">출판사명</option>
+                    <option value="ISBN">ISBN</option>
+                </select>
+                <input id = "search_book" type = "text">
+                <button id = "search_btn" type = "submit"><img id = "search_btn_icon" src="https://img.icons8.com/material-sharp/24/228BE6/search.png"/></button>
             </div>
 
             <!-- header bottom 회원수 -->
             <div id = 'hb_member'>
-
+                <!-- 회원 수 -->
+                <div id = 'hb_member_element'>
+                    <img src="./img/nonecolorperson.png">
+                    
+                    <!-- 텍스트 그룹용 div -->
+                    <div id = 'hb_member_text_group'>
+                        <p>회원 수</p>
+                        <p id = 'mem_value'>9명</p>
+                    </div>
+                </div>
+                <!-- 전체 등록된 책  아이콘 출처 - Textbook icons created by meaicon - Flaticon   -->
+                <div id = 'hb_member_element'>
+                    <img src = './img/book.png'>
+                    
+                    <!-- 텍스트 그룹용 div -->
+                    <div id = 'hb_member_text_group'>
+                        <p>전체 등록된 책</p>
+                        <p id = 'mem_value'>9999999권</p>
+                    </div>
+                    
+                </div>
+                <!-- 판매점 수 -->
+                <div id = 'hb_member_element'>
+                    <img src="./img/colorperson.png">
+                    
+                    <!-- 텍스트 그룹용 div -->
+                    <div id = 'hb_member_text_group'>
+                        <p>판매점 수</p>
+                        <p id = 'mem_value'>999999점</p>
+                    </div>
+                    
+                </div>
+                <!-- 어제 등록된 책 -->
+                <div id = 'hb_member_element'>
+                    <img src = './img/colorbook.png'>
+                    
+                    <!-- 텍스트 그룹용 div -->
+                    <div id = 'hb_member_text_group'>
+                        <p>어제 등록된 책</p>
+                        <p id = 'mem_value'>99권</p>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- 메뉴, 실검 -->
-        <div class = 'main_menu_realtimesearch'>
-            <!-- 메뉴 -->
-            <div class = 'main_menu'>
-                <ul>
-                    <li><a href = "#">분야찾기</a></li>
-                    <li><a href = "#" id="bookoa_red">가격대별코너</a></li>
-                    <li><a href = "#">이벤트</a></li>
-                    <li><a href = "#">인증서점</a></li>
-                    <li><a href = "#">나의서점</a></li>
-                </ul>
-            </div>
+        <div id = "border_line">
+            <div class = 'main_menu_realtimesearch'>
+                <!-- 메뉴 -->
+                <div class = 'main_menu'>
+                    <ul>
+                        <li><a href = "#">분야찾기</a></li>
+                        <li><a href = "#" id="bookoa_red">가격대별코너</a></li>
+                        <li><a href = "#">이벤트</a></li>
+                        <li><a href = "#">인증서점</a></li>
+                        <li><a href = "#">나의서점</a></li>
+                    </ul>
+                </div>
 
-            <!-- 실검 -->
-            <div class = 'realtimesearch'>
-
+                <!-- 실검 -->
+                <div class = 'realtimesearch'>
+                    <p>실검</p>
+                    <button id = "rts_btn" type = "submit"><img id = "search_btn_icon" src="https://img.icons8.com/material-sharp/24/228BE6/search.png"/></button>
+                </div>
             </div>
         </div>
     </header>
@@ -79,12 +131,16 @@
                 <!-- Swiper -->
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">
+                            <img src="./img/bookoa_banner.jpg">
+                        </div>
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next">
+                    </div>
+                    <div class="swiper-button-prev">
+                    </div>
+                    <div class="swiper-pagination">
+                    </div>
                 </div>
             </div>
         </div>
@@ -112,13 +168,61 @@
                 <div class = 'new_book_content'>
                     <!-- 새로 등록된 도서 종류 -->
                     <div id = 'new_book'>
+                        <img id = 'new_book_img'>
+                        <!-- 단순 제목 가격 그룹 -->
+                        <div id = 'new_book_text'>
+                            <p id = 'new_book_title'>책 제목 입니다</p>
+                            <p><b>가격입니다</b></p>
+                        </div>
                     </div>
-                    <div id = 'new_book'></div>
-                    <div id = 'new_book'></div>
-                    <div id = 'new_book'></div>
-                    <div id = 'new_book'></div>
-                    <div id = 'new_book'></div>
-                    <div id = 'new_book'></div>
+                    <div id = 'new_book'>
+                        <img id = 'new_book_img'>
+                        <!-- 단순 제목 가격 그룹 -->
+                        <div id = 'new_book_text'>
+                            <p id = 'new_book_title'>책 제목 입니다</p>
+                            <p><b>가격입니다</b></p>
+                        </div>
+                    </div>
+                    <div id = 'new_book'>
+                        <img id = 'new_book_img'>
+                        <!-- 단순 제목 가격 그룹 -->
+                        <div id = 'new_book_text'>
+                            <p id = 'new_book_title'>책 제목 입니다</p>
+                            <p><b>가격입니다</b></p>
+                        </div>
+                    </div>
+                    <div id = 'new_book'>
+                        <img id = 'new_book_img'>
+                        <!-- 단순 제목 가격 그룹 -->
+                        <div id = 'new_book_text'>
+                            <p id = 'new_book_title'>책 제목 입니다</p>
+                            <p><b>가격입니다</b></p>
+                        </div>
+                    </div>
+                    <div id = 'new_book'>
+                        <img id = 'new_book_img'>
+                        <!-- 단순 제목 가격 그룹 -->
+                        <div id = 'new_book_text'>
+                            <p id = 'new_book_title'>책 제목 입니다</p>
+                            <p><b>가격입니다</b></p>
+                        </div>
+                    </div>
+                    <div id = 'new_book'>
+                        <img id = 'new_book_img'>
+                        <!-- 단순 제목 가격 그룹 -->
+                        <div id = 'new_book_text'>
+                            <p id = 'new_book_title'>책 제목 입니다</p>
+                            <p><b>가격입니다</b></p>
+                        </div>
+                    </div>
+                    <div id = 'new_book'>
+                        <img id = 'new_book_img'>
+                        <!-- 단순 제목 가격 그룹 -->
+                        <div id = 'new_book_text'>
+                            <p id = 'new_book_title'>책 제목 입니다</p>
+                            <p><b>가격입니다</b></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -147,26 +251,110 @@
 
                     <!-- 1번 행 -->
                     <div class = "price_book_content_row1">
-                        <div id = 'price_book'></div>
-                        <div id = 'price_book'></div>
-                        <div id = 'price_book'></div>
-                        <div id = 'price_book'></div>
+                        <div id = 'price_book'>
+                            <img id = 'price_book_img'>
+                            <!-- 단순 제목 가격 그룹 -->
+                            <div id = 'price_book_text'>
+                                <p id = 'new_book_title'>책 제목 입니다</p>
+                                <p><b>가격입니다</b></p>
+                            </div>
+                        </div>
+                        <div id = 'price_book'>
+                            <img id = 'price_book_img'>
+                            <!-- 단순 제목 가격 그룹 -->
+                            <div id = 'price_book_text'>
+                                <p id = 'new_book_title'>책 제목 입니다</p>
+                                <p><b>가격입니다</b></p>
+                            </div>
+                        </div>
+                        <div id = 'price_book'>
+                            <img id = 'price_book_img'>
+                            <!-- 단순 제목 가격 그룹 -->
+                            <div id = 'price_book_text'>
+                                <p id = 'new_book_title'>책 제목 입니다</p>
+                                <p><b>가격입니다</b></p>
+                            </div>
+                        </div>
+                        <div id = 'price_book'>
+                            <img id = 'price_book_img'>
+                            <!-- 단순 제목 가격 그룹 -->
+                            <div id = 'price_book_text'>
+                                <p id = 'new_book_title'>책 제목 입니다</p>
+                                <p><b>가격입니다</b></p>
+                            </div>
+                        </div>
                     </div>
                     
                     <!-- 2번 행 -->
                     <div class = "price_book_content_row2">
-                        <div id = 'price_book'></div>
-                        <div id = 'price_book'></div>
-                        <div id = 'price_book'></div>
-                        <div id = 'price_book'></div>
+                        <div id = 'price_book'>
+                            <img id = 'price_book_img'>
+                            <!-- 단순 제목 가격 그룹 -->
+                            <div id = 'price_book_text'>
+                                <p id = 'new_book_title'>책 제목 입니다</p>
+                                <p><b>가격입니다</b></p>
+                            </div>
+                        </div>
+                        <div id = 'price_book'>
+                            <img id = 'price_book_img'>
+                            <!-- 단순 제목 가격 그룹 -->
+                            <div id = 'price_book_text'>
+                                <p id = 'new_book_title'>책 제목 입니다</p>
+                                <p><b>가격입니다</b></p>
+                            </div>
+                        </div>
+                        <div id = 'price_book'>
+                            <img id = 'price_book_img'>
+                            <!-- 단순 제목 가격 그룹 -->
+                            <div id = 'price_book_text'>
+                                <p id = 'new_book_title'>책 제목 입니다</p>
+                                <p><b>가격입니다</b></p>
+                            </div>
+                        </div>
+                        <div id = 'price_book'>
+                            <img id = 'price_book_img'>
+                            <!-- 단순 제목 가격 그룹 -->
+                            <div id = 'price_book_text'>
+                                <p id = 'new_book_title'>책 제목 입니다</p>
+                                <p><b>가격입니다</b></p>
+                            </div>
+                        </div>
                     </div>
                     
                     <!-- 3번 행 -->
                     <div class = "price_book_content_row3">
-                        <div id = 'price_book'></div>
-                        <div id = 'price_book'></div>
-                        <div id = 'price_book'></div>
-                        <div id = 'price_book'></div>
+                        <div id = 'price_book'>
+                            <img id = 'price_book_img'>
+                            <!-- 단순 제목 가격 그룹 -->
+                            <div id = 'price_book_text'>
+                                <p id = 'new_book_title'>책 제목 입니다</p>
+                                <p><b>가격입니다</b></p>
+                            </div>
+                        </div>
+                        <div id = 'price_book'>
+                            <img id = 'price_book_img'>
+                            <!-- 단순 제목 가격 그룹 -->
+                            <div id = 'price_book_text'>
+                                <p id = 'new_book_title'>책 제목 입니다</p>
+                                <p><b>가격입니다</b></p>
+                            </div>
+                        </div>
+                        <div id = 'price_book'>
+                            <img id = 'price_book_img'>
+                            <!-- 단순 제목 가격 그룹 -->
+                            <div id = 'price_book_text'>
+                                <p id = 'new_book_title'>책 제목 입니다</p>
+                                <p><b>가격입니다</b></p>
+                            </div>
+                        </div>
+                        <div id = 'price_book'>
+                            <img id = 'price_book_img'>
+                            <!-- 단순 제목 가격 그룹 -->
+                            <div id = 'price_book_text'>
+                                <p id = 'new_book_title'>책 제목 입니다</p>
+                                <p><b>가격입니다</b></p>
+                            </div>
+                        </div>
                     </div>
                     
                 </div>
@@ -238,6 +426,12 @@
                         </div>
                     </div>
                 </div>
+
+                <div>
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                </div>
             </div>
         </div>
 
@@ -251,7 +445,18 @@
                 </div>
 
                 <div class = 'notice_event_content'>
-
+                    <div id = 'ne_content'>
+                        <p>공지1</p>
+                        <p id = 'ne_date'>날짜</p>
+                    </div>
+                    <div id = 'ne_content'>
+                        <p>공지2</p>
+                        <p id = 'ne_date'>날짜</p>
+                    </div>
+                    <div id = 'ne_content'>
+                        <p>공지3</p>
+                        <p id = 'ne_date'>날짜</p>
+                    </div>
                 </div>
             </div>
 
@@ -262,7 +467,18 @@
                     <a href = "#" class = "more_view" id="bookoa_gray">더보기</a>
                 </div>
                 <div class = 'notice_event_content'>
-                    
+                    <div id = 'ne_content'>
+                        <p>이벤트1</p>
+                        <p id = 'ne_date'>날짜</p>
+                    </div>
+                    <div id = 'ne_content'>
+                        <p>이벤트2</p>
+                        <p id = 'ne_date'>날짜</p>
+                    </div>
+                    <div id = 'ne_content'>
+                        <p>이벤트3</p>
+                        <p id = 'ne_date'>날짜</p>
+                    </div>
                 </div>
             </div>
 
@@ -295,15 +511,15 @@
                 <p>고객만족센터</p>
                 <div class = 'tel_cuns'>
                     <p id ='tel'>1544-2949</p>
-                    <button type = "button" class = "cuns_btn">상담시간 안내</button>
+                    <a href = '#' class = 'cuns_btn'>상담시간 안내</a>
                 </div>
             </div>
         </div>
-        
-
+    
     </footer>
 
     <script href = './javascript/js.js'></script>
+    <script href = './javascript/book.js'></script>
     <!-- Swiper JS -->
     <script href = './javascript/swiper.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>

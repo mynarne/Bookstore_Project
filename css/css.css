@@ -82,23 +82,89 @@ header {
 #hb_search {
     width: 620px;
     height: 61px;
-    
+    display: flex;
+    align-items: center;
+    border: 2px solid #237AF6;
+    justify-content: space-between;
+}
 
-    background-color: aquamarine;
+#search_category {
+    width: 100px;
+    border: none;
+    padding-left: 14px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#search_book {
+    width: 450px;
+    margin-right: 10px;
+    border: none;
+}
+
+#search_btn {
+    background-color: transparent;
+    border: none;
+    margin-right: 10px;
+}
+
+#search_btn_icon {
+    width: 20px;
+    height: 20px;
 }
 
 /* header bottom 회원수 */
 #hb_member {
     width: 235px;
     height: 76px;
-    
 
-    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    box-sizing: border-box;
 }
 
+#hb_member_element {
+    width: 110px;
+    height: 38px;
+
+    display: flex;
+    justify-content: flex-start;
+}
+
+#hb_member_element img {
+    width: 25px;
+    height: 35px;
+}
+
+#hb_member_element p {
+    font-size: 12px;
+    font-weight: 400;
+    
+}
+
+#mem_value {
+    font-size: 14px;
+    color: #237AF6;
+}
+
+#hb_member_text_group {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
 
 /* ----------------------------------- 메인 메뉴 및 실시간 검색어 (in header) -------------------------------------------------- */
 
+
+/* 단순 보더 라인 색 전용 */
+#border_line {
+    width: 100%;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
 
 .main_menu_realtimesearch {
     width: 1140px;
@@ -107,7 +173,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 /* 메인 메뉴 */
@@ -115,6 +180,7 @@ header {
     width: 730px;
     height: 50px;
     align-content: center;
+    margin-left: 10px;
 }
 
 .main_menu ul {
@@ -136,10 +202,26 @@ header {
 .realtimesearch {
     width: 170px;
     height: 50px;
-
-    background-color: lightgoldenrodyellow;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
+.realtimesearch p {
+    font-size: 12px;
+    font-weight: bold;
+    color: #237AF6;
+}
+
+.realtimesearch p:hover {
+
+}
+
+#rts_btn {
+    border: 1px solid #f0f0f0;
+    border-radius: 20%;
+    margin-right: 10px;
+}
 
 /* --------------------------------------------- section ------------------------------------------------------- */
 
@@ -160,8 +242,6 @@ section {
     display: flex;
     justify-content: center;
     margin: 0 auto;
-
-    background-color: #237AF6;
 }
 
 .swiper {
@@ -172,7 +252,6 @@ section {
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #444;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,6 +264,54 @@ section {
     object-fit: cover;
 }
 
+.swiper-button-next {
+    border: 1px solid #E4F1FF;
+    background-color: #E4F1FF;
+    border-radius: 20%;
+    left: 100px;
+    right: auto;
+    top: auto;
+    bottom: 100px;
+    color: #888;
+}
+
+.swiper-button-prev {
+    border: 1px solid #E4F1FF;
+    background-color: #E4F1FF;
+    border-radius: 20%;
+    left: 100px;
+    right: auto;
+    top: auto;
+    bottom: 100px;
+    color: #888;
+}
+
+.swiper-button-next::after {
+    content: '>';
+    font-size: 20px;
+    font-weight: bold;
+    color: #4b4b4b;
+}
+
+/* 이전 버튼 화살표 설정 */
+.swiper-button-prev::after {
+    content: '<';
+    font-size: 20px; 
+    font-weight: bold;
+    color: #4b4b4b;
+}
+
+
+.swiper-paginationt {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+}
 
 /* -------------------------------------------- section new book ----------------------------------------------- */
 
@@ -254,11 +381,24 @@ section {
 /* 새로 등록된 도서 책 개별 */
 #new_book {
     width: 130px;
-    height: 176px;
-
-    background-color: yellowgreen;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
 }
 
+#new_book_img {
+    width: 130px;
+    height: 176px;
+    background-color: antiquewhite;
+}
+
+#new_book_text {
+    width: 130px;
+    height: 124px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
 
 /* --------------------------------------------- price book certi store ------------------------------------------------ */
 
@@ -303,8 +443,6 @@ section {
     height: 291px;
     display: flex;
     justify-content: space-between;
-
-    background-color: #E14F4F;
 }
 
 /* 가격대별 2번 행 (700 * 292) */
@@ -313,8 +451,6 @@ section {
     height: 292px;
     display: flex;
     justify-content: space-between;
-
-    background-color: #E14F4F;
 }
 
 /* 가격대별 3번 행 (700 * 301) */
@@ -323,14 +459,25 @@ section {
     height: 301px;
     display: flex;
     justify-content: space-between;
-
-    background-color: #E14F4F;
 }
 
 #price_book {
     width: 130px;
+    
+}
+
+#price_book_img {
+    width: 130px;
     height: 176px;
     background-color: #237AF6;
+}
+
+#price_book_text {
+    width: 130px;
+    height: 124px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
 }
 
 #pbm_nav {
@@ -372,11 +519,13 @@ section {
 
 .certi_store_content {
     width: 320px;
-    height: 877px;
-    background-color: #8DFF83;
+    height: 900px;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    border: 1px solid #f0f0f0;
 }
 
 .certi_store {
@@ -385,7 +534,10 @@ section {
     display: flex;
     align-items: center;
 
-    background-color: #9E9E9E;
+    background-image: linear-gradient(#f0f0f0, #f0f0f0);
+    background-size: 280px 1px;
+    background-repeat: no-repeat;
+    background-position: bottom center;
     margin-bottom: 5px;
 }
 
@@ -409,13 +561,14 @@ section {
 }
 
 .certi_store_txt p {
-    font-size: 11px;
-    margin-bottom: 10px;
+    font-size: 12px;
+    margin-bottom: 7px;
 }
 
 #introduce {
     font-size: 14px;
     line-height: 1.7;
+    color: #6F6F6F;
 }
 
 #csc_nav {
@@ -461,27 +614,45 @@ section {
 .notice_event {
     width: 551px;
     height: 136px;
-
-    background-color: #eee;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .notice_event_title {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    margin-bottom: 10px;
 }
 
 .notice_event_content {
-     
+    width: 551px;
+}
+
+#ne_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid #eee;
+}
+
+.notice_event_content p {
+    margin-top: 4px;
+    font-size: 14px;
+    margin-bottom: 10px;
+
+}
+
+#ne_date {
+    font-size: 13px;
+    color: #353535;
 }
 
 .tsm_banner {
     width: 551px;
     height: 159px;
     margin-bottom: 102px;
-
-    background-color: #E14F4F;
 }
 
 
@@ -555,6 +726,7 @@ footer ul {
 .tel_cuns {
     display: flex;
     justify-content: space-between, center;
+    align-items: flex-start;
 }
 
 #tel {
@@ -569,9 +741,11 @@ footer ul {
 
 .cuns_btn {
     margin-left: 10px;
+    text-align: center;
     background: transparent;
     border: 2px solid #eee;
     color: #eee;
     font-size: 13px;
-    padding: 0 5px;
+    padding: 6px 4px 4px;
+    text-decoration: none;
 }
