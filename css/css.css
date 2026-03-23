@@ -139,6 +139,14 @@ header {
     height: 35px;
 }
 
+#hb_member #hb_member_element:nth-child(2) img {
+    transform: rotate(5deg) skewY(-20deg) rotateZ(-10deg);
+}
+
+#hb_member #hb_member_element:nth-child(4) img {
+    transform: rotate(5deg) skewY(-15deg) rotateZ(-10deg);
+}
+
 #hb_member_element p {
     font-size: 12px;
     font-weight: 400;
@@ -183,14 +191,61 @@ header {
     margin-left: 10px;
 }
 
+.menu_search_genre {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.sub_genre {
+    display: none;
+    
+}
+
+.menu_price_conner {
+
+}
+
+.menu_event {
+
+}
+
+.menu_certi_store {
+
+}
+.menu_certi_store img {
+    width: 14px;
+    height: 14px;
+}
+
+.menu_my_store {
+
+}
+
 .main_menu ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.main_menu ul li {
+    position: relative;
+}
+
+.main_menu ul li:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 30%; 
+    background-color: rgb(227, 227, 151);
+    z-index: -1;
+}
+
 .main_menu ul li a {
     color: #237AF6;
+    font-weight: 400;
     text-decoration: none;
 }
 
@@ -210,11 +265,7 @@ header {
 .realtimesearch p {
     font-size: 12px;
     font-weight: bold;
-    color: #237AF6;
-}
-
-.realtimesearch p:hover {
-
+    color: #1d60bf;
 }
 
 #rts_btn {
@@ -239,8 +290,7 @@ section {
 #slider {
     width: 1140px;
     height: 420px;
-    display: flex;
-    justify-content: center;
+    position: relative;
     margin: 0 auto;
 }
 
@@ -264,53 +314,56 @@ section {
     object-fit: cover;
 }
 
-.swiper-button-next {
-    border: 1px solid #E4F1FF;
-    background-color: #E4F1FF;
-    border-radius: 20%;
-    left: 100px;
-    right: auto;
-    top: auto;
-    bottom: 100px;
-    color: #888;
-}
-
-.swiper-button-prev {
-    border: 1px solid #E4F1FF;
-    background-color: #E4F1FF;
-    border-radius: 20%;
-    left: 100px;
-    right: auto;
-    top: auto;
-    bottom: 100px;
-    color: #888;
-}
-
-.swiper-button-next::after {
-    content: '>';
-    font-size: 20px;
-    font-weight: bold;
-    color: #4b4b4b;
-}
-
-/* 이전 버튼 화살표 설정 */
+.swiper-button-next::after,
 .swiper-button-prev::after {
-    content: '<';
-    font-size: 20px; 
-    font-weight: bold;
-    color: #4b4b4b;
+    display: none !important;
+    content: none !important;
+    visibility: hidden;
+    color: transparent;
 }
 
+.swiper-button-next, 
+.swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #E4F1FF;
+    background-color: #E4F1FF;
+    border-radius: 20%;
 
-.swiper-paginationt {
-    width: 20px;
-    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100 !important;
+    top: 50%;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: #d1e6ff;
+    cursor: pointer;
+}
+
+.swiper-pagination {
+    width: 100%;
     text-align: center;
-    line-height: 20px;
+    
     font-size: 12px;
-    color: #000;
+    color: #fff;
     opacity: 1;
-    background: rgba(0, 0, 0, 0.2);
+    display: flex !important;
+    justify-content: center;
+}
+
+.swiper-pagination-bullet {
+    background: #fff !important;
+    opacity: 0.6 !important;
+    width: 10px !important;
+    height: 10px !important;
+}
+
+.swiper-pagination-bullet-active {
+      color: #fff;
+      background: #007aff;
 }
 
 /* -------------------------------------------- section new book ----------------------------------------------- */
@@ -341,7 +394,7 @@ section {
 }
 
 /* 새로 등록된 도서 메뉴 */
-#nbm_nav {
+.nbm_nav {
     width: 500px;
     height: 36px;
     margin-left: 30px;
@@ -353,12 +406,13 @@ section {
     font-weight: 500;
 }
 
-#nbm_nav ul {
+.nbm_nav ul {
     display: flex;
     margin-left: 5px;
 }
 
-#nbm_nav ul li {
+.nbm_nav ul li {
+    position: relative;
     margin: 0 9px;
 }
 
@@ -379,7 +433,7 @@ section {
 }
 
 /* 새로 등록된 도서 책 개별 */
-#new_book {
+.new_book {
     width: 130px;
     height: 300px;
     display: flex;
@@ -389,7 +443,6 @@ section {
 #new_book_img {
     width: 130px;
     height: 176px;
-    background-color: antiquewhite;
 }
 
 #new_book_text {
@@ -461,7 +514,7 @@ section {
     justify-content: space-between;
 }
 
-#price_book {
+.price_book {
     width: 130px;
     
 }
@@ -469,7 +522,6 @@ section {
 #price_book_img {
     width: 130px;
     height: 176px;
-    background-color: #237AF6;
 }
 
 #price_book_text {
@@ -541,36 +593,6 @@ section {
     margin-bottom: 5px;
 }
 
-.certi_store_profile {
-    width: 84px;
-    height: 84px;
-    border-radius: 50%;
-    margin-left: 25px;
-    margin-right: 10px;
-
-    background-color: #237AF6;
-    flex-shrink: 0;
-}
-
-.certi_store_txt {
-    width: 201px;
-}
-
-.certi_store_txt h4 {
-    margin-bottom: 2px;
-}
-
-.certi_store_txt p {
-    font-size: 12px;
-    margin-bottom: 7px;
-}
-
-#introduce {
-    font-size: 14px;
-    line-height: 1.7;
-    color: #6F6F6F;
-}
-
 #csc_nav {
     display: flex;
     justify-content: flex-start;
@@ -593,6 +615,57 @@ section {
     text-decoration: none;
 }
 
+
+.certi_store_profile {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin-right: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.certi_store_profile img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.certi_store_txt {
+    width: 201px;
+}
+
+.certi_store_txt h4 {
+    margin-bottom: 2px;
+}
+
+.certi_store_txt p {
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+.introduce {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #6F6F6F;
+    overflow: hidden;
+}
+
+.store_pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.page_btn {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+}
 
 /* ---------------------------------------------- 공지사항 이벤트 ---------------------------------------------------- */
 
