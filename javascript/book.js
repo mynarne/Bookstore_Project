@@ -31,7 +31,7 @@ async function loadData(genre = '소설') {
             if (!bookData1) {
                 return;
             }
-
+            
             book.innerHTML = `
                 <img id="new_book_img" src="${bookData1.thumbnail}" alt="${bookData1.title} 표지">
                 <div id="new_book_text">

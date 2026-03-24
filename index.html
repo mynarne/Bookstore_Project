@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 </head>
 <body>
-
     <header>
         <!-- header top -->
         <div id = 'header_top'>
@@ -43,7 +42,7 @@
             
             <!-- header bottom search -->
             <div id = 'hb_search'>
-                <select id = "search_category">
+                <select class = "search_category">
                     <option value="all">통합검색</option>
                     <option value="title">도서명</option>
                     <option value="author">저자명</option>
@@ -63,17 +62,17 @@
                     <!-- 텍스트 그룹용 div -->
                     <div id = 'hb_member_text_group'>
                         <p>회원 수</p>
-                        <p id = 'mem_value'>9명</p>
+                        <span id = 'mem_value'>9명</span>
                     </div>
                 </div>
                 <!-- 전체 등록된 책  아이콘 출처 - Textbook icons created by meaicon - Flaticon   -->
                 <div id = 'hb_member_element'>
-                    <img src = './img/book.png'>
+                    <img src = './img/whitebook.png'>
                     
                     <!-- 텍스트 그룹용 div -->
                     <div id = 'hb_member_text_group'>
                         <p>전체 등록된 책</p>
-                        <p id = 'mem_value'>9999999권</p>
+                        <span id = 'mem_value'>9999999권</span>
                     </div>
                     
                 </div>
@@ -84,7 +83,7 @@
                     <!-- 텍스트 그룹용 div -->
                     <div id = 'hb_member_text_group'>
                         <p>판매점 수</p>
-                        <p id = 'mem_value'>999999점</p>
+                        <span id = 'mem_value'>999999점</span>
                     </div>
                     
                 </div>
@@ -95,7 +94,7 @@
                     <!-- 텍스트 그룹용 div -->
                     <div id = 'hb_member_text_group'>
                         <p>어제 등록된 책</p>
-                        <p id = 'mem_value'>99권</p>
+                        <span id = 'mem_value'>99권</span>
                     </div>
                 </div>
             </div>
@@ -109,7 +108,7 @@
                     <ul>
                         <li class = 'menu_search_genre'>
                             <a href = "#">분야찾기</a>
-                            <!-- <ul class = 'sub_genre'>
+                            <ul class = 'sub_menu sub_genre'>
                                 <li>소설</li>
                                 <li>문학/인물</li>
                                 <li>역사/철학/심리/교육</li>
@@ -138,27 +137,27 @@
                                 <li>고서/희귀본</li>
                                 <li>성인</li>
                                 <li>기타</li>
-                            </ul> -->
+                            </ul>
                         </li>
                         <li class = 'menu_price_conner'>
                             <a href = "#" id="bookoa_red">가격대별코너</a>
-                            <!-- <ul class = 'sub_price'>
+                            <ul class = 'sub_menu sub_price'>
                                 <li>1천원대</li>
                                 <li>2천원대</li>
                                 <li>3천원대</li>
                                 <li>4천원대</li>
-                                <li>5천원대 이상</li>
-                            </ul> -->
+                                <li>5천원 이상</li>
+                            </ul>
                         </li>
                         <li class = 'menu_event'>
                             <a href = "#">이벤트</a>
-                            <!-- <ul class = 'sub_event'>
+                            <ul class = 'sub_menu sub_event'>
                                 <li>이벤트 공지</li>
                                 <li>이벤트 발표</li>
                                 <li>인증게시판</li>
                                 <li>자유게시판</li>
                                 <li>글쓰기</li>
-                            </ul> -->
+                            </ul>
                         </li>
                         <li class = 'menu_certi_store'><a href = "#"><img src = './img/verify.png'>인증서점</a></li>
                         <li class = 'menu_my_store'><a href = "#">나의서점</a></li>
@@ -168,11 +167,36 @@
                 <!-- 실검 -->
                 <div class = 'realtimesearch'>
                     <p>실시간 인기 검색어</p>
+                    <div class = 'rts_wrap'>
+                        <ul class = 'rts_list'>
+                            <li><span>1.</span>나루토</li>
+                            <li><span>2.</span>원피스</li>
+                            <li><span>3.</span>비질랜티</li>
+                            <li><span>4.</span>주술회전</li>
+                            <li><span>5.</span>체인소맨</li>
+                            <li><span>6.</span>스파이패밀리</li>
+                            <li><span>7.</span>강철의연금술사</li>
+                            <li><span>8.</span>진격의거인</li>
+                            <li><span>9.</span>에반게리온</li>
+                            <li><span>10.</span>불꽃소방대</li>
+                        </ul>
+                    </div>
                     <button id = "rts_btn" type = "submit"><img id = "search_btn_icon" src="https://img.icons8.com/material-sharp/24/228BE6/search.png"/></button>
                 </div>
             </div>
         </div>
     </header>
+
+
+    <!-- 오른쪽 하단 리모콘 -->
+    <div class = 'right_remote'>
+        <div class = 'remote_group'>
+            <img id = 'q_mark' src="./img/question.png">
+            <img id = 'to_top' src="./img/top.png">
+            <img id = 'kakao' src="./img/kakao.png">
+        </div>
+    </div>
+    
 
     <section>
         <!-- 배너 -->
@@ -184,9 +208,7 @@
                         <div class = "swiper-slide">
                             <img src = "./img/bookoa_banner.jpg">
                         </div>
-                        <div class = "swiper-slide">
-                            <img src = "./img/bookoa_banner.jpg">
-                        </div>
+                        
                     </div>
                     <div class = "swiper-button-next">
                     </div>
@@ -205,7 +227,7 @@
                 <div class = 'new_book_menu'>
                     <h2>새로 등록된 도서</h2>
                     <nav class = 'nbm_nav'>
-                        <ul>
+                        <ul class = 'nbm_nav_list'>
                             <li><a href = "#" id = "bookoa_gray">소설</a></li>
                             <li><a href = "#" id = "bookoa_gray">문학/인물</a></li>
                             <li><a href = "#" id = "bookoa_gray">만화</a></li>
@@ -571,8 +593,25 @@
                 </div>
             </div>
         </div>
-    
     </footer>
+
+    <!-- 상담시간 안내 눌렀을 때 나올 안내 -->
+    <div class = 'modal' id = 'cuns_notice_main'>
+        <div class = 'cuns_notice_title'>
+            <h2>상담시간 안내</h2>
+            <button class = 'cuns_notice_close_btn'><img src = './img/close.png'></button>
+        </div>
+        <div class = 'cuns_notice_content'>
+            <p><b>상담시간</b></p>
+            <ul>
+                <li>■ 평일 오전 9시 ~ 오후 6시</li>
+                <li>■ 점심시간 : 오후 12시 30분 ~ 오후 1시 30분</li>
+                <li>■ *매달 첫째주 금요일 점심시간 : 오후 12시 ~ 오후 2시</li>
+                <li>■ *매달 마지막주 수요일 : 오전 9시 ~ 오후 1시</li>
+                <li>■ 휴무일 : 토, 일 공휴일 휴무</li>
+            </ul>
+        </div>
+    </div>
 
     <script src = './javascript/js.js'></script>
     <script src = './javascript/book.js'></script>

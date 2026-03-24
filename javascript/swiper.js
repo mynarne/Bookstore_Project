@@ -1,5 +1,7 @@
 let swiper = new Swiper(".mySwiper", {
 
+    watchOverflow: false,
+
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
