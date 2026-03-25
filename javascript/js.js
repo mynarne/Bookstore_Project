@@ -71,14 +71,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 } */
 
+
+// sub header
+
+const subHeader = document.querySelector('.sub_header');
+
+window.addEventListener('scroll', function() {
+
+    let scrollTop = window.scrollY;
+    
+    if (scrollTop >= 196) {
+        subHeader.classList.add('active');
+    }
+
+    else {
+        subHeader.classList.remove('active');
+    }
+});
+
+
+
 // modal
-const modal = document.getElementById('.modal');
+
+const modal = document.querySelector('.modal');
 const openBtn = document.querySelector('.cuns_btn');
 const closeBtn = document.querySelector('.cuns_notice_close_btn');
 
 // 열기
 openBtn.onclick = function(e) {
     e.preventDefault();
+    modal.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
     modal.style.display = 'flex';
 }
 
@@ -86,3 +108,4 @@ openBtn.onclick = function(e) {
 closeBtn.onclick = function() {
     modal.style.display = 'none';
 }
+

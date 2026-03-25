@@ -107,9 +107,9 @@
                 <div class = 'main_menu'>
                     <ul>
                         <li class = 'menu_search_genre'>
-                            <a href = "#">분야찾기</a>
+                            <a href = "#" id="bookoa_blue">분야찾기</a>
                             <ul class = 'sub_menu sub_genre'>
-                                <li>소설</li>
+                                <a href = '#'><li>소설</li></a>
                                 <li>문학/인물</li>
                                 <li>역사/철학/심리/교육</li>
                                 <li>자기계발</li>
@@ -150,7 +150,7 @@
                             </ul>
                         </li>
                         <li class = 'menu_event'>
-                            <a href = "#">이벤트</a>
+                            <a href = "#" id="bookoa_blue">이벤트</a>
                             <ul class = 'sub_menu sub_event'>
                                 <li>이벤트 공지</li>
                                 <li>이벤트 발표</li>
@@ -159,8 +159,14 @@
                                 <li>글쓰기</li>
                             </ul>
                         </li>
-                        <li class = 'menu_certi_store'><a href = "#"><img src = './img/verify.png'>인증서점</a></li>
-                        <li class = 'menu_my_store'><a href = "#">나의서점</a></li>
+                        <li class = 'menu_certi_store'>
+                            <a href = "#" id="bookoa_blue">
+                                <img src = './img/verify.png'>인증서점
+                            </a>
+                        </li>
+                        <li class = 'menu_my_store'>
+                            <a href = "#" id="bookoa_blue">나의서점</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -186,6 +192,20 @@
             </div>
         </div>
     </header>
+
+    <div class = 'sub_header'>
+        <div class = 'sh_main'>
+            <!-- sub header logo -->
+            <a href = "index.html"><img id = 'sh_logo' src="./img/bold.svg"></a>
+            
+            <!-- 오른쪽 -->
+            <div class = 'icon_pack'>
+                <img src="./img/person.png">
+                <img src="./img/shopping-bag.png">
+                <img src="./img/zoom.png">
+            </div>
+        </div>
+    </div>
 
 
     <!-- 오른쪽 하단 리모콘 -->
@@ -574,11 +594,11 @@
                 <ul>
                     <li>회사소개</li>
                     <li>|</li>
-                    <li>개인정보취급방침</li>
+                    <a href = '#'><li>개인정보취급방침</li></a>
                     <li>|</li>
-                    <li>이용약관</li>
+                    <a href = '#'><li>이용약관</li></a>
                     <li>|</li>
-                    <li>고객센터</li>
+                    <a href = '#'><li>고객센터</li></a>
                 </ul>
 
                 <p>
@@ -596,20 +616,22 @@
     </footer>
 
     <!-- 상담시간 안내 눌렀을 때 나올 안내 -->
-    <div class = 'modal' id = 'cuns_notice_main'>
-        <div class = 'cuns_notice_title'>
-            <h2>상담시간 안내</h2>
-            <button class = 'cuns_notice_close_btn'><img src = './img/close.png'></button>
-        </div>
-        <div class = 'cuns_notice_content'>
-            <p><b>상담시간</b></p>
-            <ul>
-                <li>■ 평일 오전 9시 ~ 오후 6시</li>
-                <li>■ 점심시간 : 오후 12시 30분 ~ 오후 1시 30분</li>
-                <li>■ *매달 첫째주 금요일 점심시간 : 오후 12시 ~ 오후 2시</li>
-                <li>■ *매달 마지막주 수요일 : 오전 9시 ~ 오후 1시</li>
-                <li>■ 휴무일 : 토, 일 공휴일 휴무</li>
-            </ul>
+    <div class = 'modal'>
+        <div class = 'cuns_notice_main'>
+            <div class = 'cuns_notice_title'>
+                <p>상담시간 안내</p>
+                <button class = 'cuns_notice_close_btn'><img src = './img/close.png'></button>
+            </div>
+            <div class = 'cuns_notice_content'>
+                <p><b>상담시간</b></p>
+                <ul>
+                    <li>■ 평일 오전 9시 ~ 오후 6시</li>
+                    <li>■ 점심시간 : 오후 12시 30분 ~ 오후 1시 30분</li>
+                    <li>■ *매달 첫째주 금요일 점심시간 : 오후 12시 ~ 오후 2시</li>
+                    <li>■ *매달 마지막주 수요일 : 오전 9시 ~ 오후 1시</li>
+                    <li>■ 휴무일 : 토, 일 공휴일 휴무</li>
+                </ul>
+            </div>
         </div>
     </div>
 

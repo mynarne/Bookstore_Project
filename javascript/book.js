@@ -3,7 +3,6 @@ async function loadData(genre = '소설') {
     
     const params = new URLSearchParams({
         query: genre,
-        sort: 'latest',
         size: 7
     });
 
@@ -33,11 +32,13 @@ async function loadData(genre = '소설') {
             }
             
             book.innerHTML = `
-                <img id="new_book_img" src="${bookData1.thumbnail}" alt="${bookData1.title} 표지">
-                <div id="new_book_text">
-                    <div><p id="new_book_title">${bookData1.title}</p></div>
-                    <div><p><b>${bookData1.price.toLocaleString()}원</b></p></div>
-                </div>
+                <a href = '#'>
+                    <img id="new_book_img" src="${bookData1.thumbnail}" alt="${bookData1.title} 표지">
+                    <div id="new_book_text">
+                        <p id="new_book_title">${bookData1.title}</p>
+                        <p><b>${bookData1.price.toLocaleString()}원</b></p>
+                    </div>
+                </a>
             `;
         });
 
@@ -46,7 +47,7 @@ async function loadData(genre = '소설') {
     }
 }
 
-async function loadData2(price = '1') {
+async function loadData2(price = '0') {
     const REST_API_KEY = "dcd4417706d218dbe42babf0a06ebfde";
     
     const params = new URLSearchParams({
@@ -80,11 +81,13 @@ async function loadData2(price = '1') {
             }
 
             book.innerHTML = `
-                <img id="price_book_img" src="${bookData2.thumbnail}" alt="${bookData2.title} 표지">
-                <div id="price_book_text">
-                    <p id="price_book_title">${bookData2.title}</p>
-                    <p><b>${bookData2.price.toLocaleString()}원</b></p>
-                </div>
+                <a href = '#'>
+                    <img id = "price_book_img" src="${bookData2.thumbnail}" alt="${bookData2.title} 표지">
+                    <div id = "price_book_text">
+                        <p id = "price_book_title">${bookData2.title}</p>
+                        <p><b>${bookData2.price.toLocaleString()}원</b></p>
+                    </div>
+                </a>
             `;
         });
 
