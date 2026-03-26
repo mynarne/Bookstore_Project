@@ -1,3 +1,34 @@
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+ul, ol {
+  list-style: none;
+}
+
+hr {
+  border-color: #DDDDDD;
+}
+
+#bookoa_blue {
+  color: #237AF6;
+}
+
+#bookoa_red {
+  color: #E14F4F;
+}
+
+#bookoa_gray {
+  color: #6F6F6F;
+}
+
+.more_view {
+  font-size: 14px;
+}
+
+
 /* header */
 
 header {
@@ -477,477 +508,366 @@ header {
     margin-right: 10px;
 }
 
-/* --------------------------------------------- section ------------------------------------------------------- */
+
+/* ----------------------------------------------- book_info ------------------------------------------------------------- */
 
 
-/* main */
-section {
-    width: 100%;
-    /* height: 2715px;    -> height 부여하면 하단 여백이 너무 커짐 */
-}
-
-/* ---------------------------------------------- section silder --------------------------------------------------- */
-
-
-/* 메인 배너 */
-#slider {
+/* 책 제목 그룹 */
+.top {
     width: 1140px;
-    height: 420px;
-    position: relative;
+    height: 200px;
     margin: 0 auto;
-}
-
-.swiper {
-    width: 100%;
-    height: 100%;
-}
-
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
-    display: none !important;
-    content: none !important;
-    visibility: hidden;
-    color: transparent;
-}
-
-.swiper-button-next, 
-.swiper-button-prev {
-    width: 40px;
-    height: 40px;
-    border: 1px solid #E4F1FF;
-    background-color: #E4F1FF;
-    border-radius: 20%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100 !important;
-    top: 50%;
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-    background-color: #d1e6ff;
-    cursor: pointer;
-}
-
-.swiper-pagination {
-    width: 100%;
-    
-    font-size: 12px;
-    color: #fff;
-    opacity: 1;
-    display: flex !important;
-    justify-content: center;
-}
-
-.swiper-pagination-bullet {
-    background: #fff !important;
-    opacity: 0.6 !important;
-    width: 10px !important;
-    height: 10px !important;
-}
-
-.swiper-pagination-bullet-active {
-    color: #fff;
-    background: #007aff;
-}
-
-/* -------------------------------------------- section new book ----------------------------------------------- */
-
-
-/* background_color용 별 기능x*/
-.new_book_main_background {
-    background-color: #FAFAFA;
-    width: 100%;
-    height: 400px;
-}
-
-/* 새로 등록된 도서 */
-.new_book_main {
-    width: 1140px;
-    height: 400px;
-    margin: 0 auto;
-    margin-bottom: 47px;
-}
-
-/* 새로 등록된 도서 제목, 메뉴, 더보기 */
-.new_book_menu {
-    width: 1140px;
-    height: 98px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* 새로 등록된 도서 메뉴 */
-.nbm_nav {
-    width: 500px;
-    height: 36px;
-    margin-left: 30px;
-
+/* 등급, 품질 등급 체크 그룹 */
+.top_grade {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 500;
 }
 
-.nbm_nav_list {
-    display: flex;
-    margin-left: 5px;
+
+/* 등급 */
+.tg_left {
+    width: 60px;
+    height: 22px;
+    margin-right: 18px;
+    text-align: center;
+    padding-top: 2px;
+    font-size: 12px;
+    background-color: #7B97BF;
+    color: white;
 }
 
-.nbm_nav_list li {
-    width: max-content;
-    position: relative;
-    margin: 0 9px;
-    
-    /* rgb(227, 227, 151); */
+/* 품질 등급 체크 */
+.tg_right {
+    width: 110px;
+    height: 22px;
+    font-size: 13px;
+    padding-top: 1px;
+    background-color: #237AF6;
+    text-align: center;
 }
 
-.new_book_menu ul a {
+.tg_right a {
     text-decoration: none;
+    color: white;
 }
 
 
-/* -------------------------------------------- new book content ----------------------------------------------- */
+/* 책 제목 */
+.top_title {
+    font-size: 25px;
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
 
 
-/* 새로 등록된 도서 책 모음 */
-.new_book_content {
+/* 저자, 출판사, 출간일, 상품등록일 */
+.tg_ul {
+    display: flex;
+    
+    font-size: 13px;
+    color: #61616B;
+    font-weight: 500;
+
+    margin-bottom: 20px;
+}
+
+.tg_ul li::after {
+    content: '|';
+    color: #cccccc;
+    font-size: 8px;
+    margin: 0 10px;
+    position: relative;
+    bottom: 2.3px;
+}
+
+.tg_ul li:nth-child(4)::after {
+    content: '';
+}
+
+
+/* -------------------------------------------------------- 서브 책 정보 ------------------------------------------------------- */
+
+.book_info {
     width: 1140px;
-    height: 302px;
+    height: 390px;
+    margin: 0 auto;
+    background-color: #FAFAFA;
+    border-top: 1px solid #d1d1d1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* 내용 배경 */
+.book_info_shape {
+    width: 650px;
+    height: 275px;
     display: flex;
     justify-content: space-around;
-}
-
-/* 새로 등록된 도서 책 개별 */
-.new_book {
-    width: 130px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-}
-
-.new_book a {
-    text-decoration: none;
-    color: black;
-}
-
-#new_book_img {
-    width: 130px;
-    height: 176px;
-}
-
-#new_book_text {
-    width: 130px;
-    height: 124px;
-    display: flex;
-    flex-direction: column;
-    padding-top: 20px;
-}
-
-/* --------------------------------------------- price book certi store ------------------------------------------------ */
-
-
-/* 가격대별 코너 , 인증서점*/
-.price_book_certi_store {
-    width: 1140px;
-    height: 1063px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-}
-
-/* -------------------------------------------------- 가격대별 코너 -------------------------------------------------*/
-.price_book_corner {
-    width: 762px;
-    height: 1016px;
-}
-
-.price_book_menu {
-    width: 762px;
-    height: 68px;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
-.price_book_content {
-    width: 762px;
-    height: 948px;
+
+/* 책 이미지 */
+.book_info_img {
+    width: 200px;
+    height: 275px;
+    margin-top: 10px;
+    margin-right: 30px;
+}
+
+/* 책 정보 */
+.book_info_content {
+    width: 450px;
+    height: 280px;
     display: flex;
+    justify-content: flex-start;
+    align-content: space-between;
     flex-wrap: wrap;
+}
+
+/* 정보 좌측 - 카테고리, ISBN, 판매가, 정가, 배송비 */
+.bic_key {
+    width: 20%;
+    height: 80%;
+    color: #696969;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-content: space-between;
 }
 
-/* 가격대별 1번 행 (700 * 291) */
-.price_book_content_row1 {    
-    width: 700px;
-    height: 291px;
+.bic_key p, .bic_value p {
+    height: 35px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+
+/* 정보 우측 - 좌측 상세 값 */
+.bic_value {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+}
+
+.bic_value p:nth-child(3) {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+
+/* 최고가, 평균가, 최저가 테이블 */
+.bic_table {
+    width: 100%;
+    height: 20%;
+    margin-top: 15px;
+    text-align: center;
+    border: 1px solid #dedede;
+    border-collapse: collapse;
+}
+
+.bic_table tr:nth-child(1) {
+    background-color: #eee;
+}
+
+.bic_table td {
+    border: 1px solid #dedede;
+    color: #444444;
+    padding: 3px 0;
+}
+
+
+/* ------------------------------------------------ main_info ---------------------------------------------------- */
+
+.main_info {
+    width: 1140px;
+    height: 1400px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.mi_key {
+    width: 20%;
+    height: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.mk_seller_intro {
+    height: 120px;
+    margin-left: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.mk_intro {
+    height: 120px;
+    margin-left: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.mk_seller {
+    height: 660px;
+    margin-left: 28px;
+    margin-top: 70px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.mi_value {
+    width: 80%;
+    height: 1400px;
+}
+
+.mv_seller_intro {
+    width: 850px;
+    height: 120px;
+    margin-left: 63px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.mv_seller_intro p {
+    margin-left: 40px;
+}
+
+.mv_intro {
+    width: 850px;
+    height: 120px;
+    margin-left: 63px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.mv_intro p {
+    margin-left: 40px;
+}
+
+.mv_seller {
+    width: 850px;
+    height: 600px;
+    margin-left: 63px;
+    margin-top: 70px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.mvs_title {
+    width: 800px;
+    height: 25px;
+    margin-left: 30px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-/* 가격대별 2번 행 (700 * 292) */
-.price_book_content_row2 {
-    width: 700px;
-    height: 292px;
+.mvst_left {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
 }
 
-/* 가격대별 3번 행 (700 * 301) */
-.price_book_content_row3 {
-    width: 700px;
-    height: 301px;
-    display: flex;
-    justify-content: space-between;
+.mvst_right {
+
 }
 
-.price_book {
-    width: 130px;
+.mvs_icon {
+    width: 60px;
+    height: 22px;
+    margin-right: 10px;
+    text-align: center;
+    padding-top: 2px;
+    font-size: 12px;
+    background-color: #237AF6;
+    font-weight: 800;
+    color: white;
 }
 
-.price_book a {
-    text-decoration: none;
+.mvst_left a {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.mvst_left a:hover {
+    color: #237AF6;
+}
+
+.mvst_right a {
+    color: #237AF6;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.mvst_right a:hover {
+    color: #6da5f2;
+}
+
+.mvs_table {
+    width: 750px;
+    border-collapse: collapse;
+    color: #444444;
+    
+}
+
+.mvs_table td:nth-child(2) {
+    color: black;
+    text-align: left;
+    padding-left: 20px
+}
+
+.mvs_table td:nth-child(1),
+.mvs_table tr:nth-child(1) td:nth-child(3) {
+    background-color: #fafafa;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 15px
+}
+
+.mvs_table tr:nth-child(1) td:nth-child(4) {
     color: black;
 }
 
-#price_book_img {
-    width: 130px;
-    height: 176px;
+.mvs_table td {
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    color: #444444;
+    padding: 18px 0;
+    word-wrap: break-word;
+    word-break: keep-all;
+    line-height: 1.5;
 }
-
-#price_book_text {
-    width: 130px;
-    height: 124px;
-    display: flex;
-    flex-direction: column;
-    padding-top: 20px;
-}
-
-#pbm_nav {
-    width: 313px;
-    height: 36px;
-    
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-#pbm_nav ul {
-    display: flex;
-}
-
-#pbm_nav ul li {
-    margin: 0 7px;
-}
-
-.price_book_menu ul a {
-    text-decoration: none;
-}
-
-/* ------------------------------------------------------ 인증서점 ---------------------------------------------- */
-.certi_store_corner{
-    width: 320px;
-    height: 1016px;
-}
-
-.certi_store_menu {
-    width: 320px;
-    height: 68px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.certi_store_content {
-    width: 320px;
-    height: 900px;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    border: 1px solid #f0f0f0;
-}
-
-.certi_store {
-    width: 320px;
-    height: 140px;
-    display: flex;
-    align-items: center;
-
-    background-image: linear-gradient(#f0f0f0, #f0f0f0);
-    background-size: 280px 1px;
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    margin-bottom: 5px;
-}
-
-#csc_nav {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 500;
-    margin-right: 20px;
-}
-
-#csc_nav ul {
-    display: flex;
-    
-}
-
-#csc_nav ul li {
-    margin: 0 4px;
-}
-
-.certi_store_menu ul a {
-    text-decoration: none;
-}
-
-
-.certi_store_profile {
-    width: 84px;
-    height: 84px;
-    border-radius: 50%;
-    margin-left: 25px;
-    margin-right: 10px;
-    overflow: hidden;
-    flex-shrink: 0;
-}
-
-.certi_store_profile img {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.certi_store_txt {
-    width: 201px;
-}
-
-.certi_store_txt h4 {
-    margin-bottom: 2px;
-}
-
-.certi_store_txt p {
-    font-size: 12px;
-    margin-bottom: 7px;
-}
-
-.introduce {
-    font-size: 14px;
-    line-height: 1.7;
-    color: #6F6F6F;
-    overflow: hidden;
-}
-
-.store_pagination {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-.page_btn {
-    width: 25px;
-    height: 25px;
-    border: 1px solid #ddd;
-    background: #fff;
-    cursor: pointer;
-}
-
-/* ---------------------------------------------- 공지사항 이벤트 ---------------------------------------------------- */
-
-
-/* 공지사항, 이벤트 */
-.notice_event_main {
-    width: 1140px;
-    height: 416px;
-    margin: 0 auto;
-    padding-left: 22px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    box-sizing: border-box;
-}
-
-.notice_event {
-    width: 551px;
-    height: 136px;
-    display: flex;
-    flex-direction: column;
-}
-
-.notice_event_title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    margin-bottom: 10px;
-}
-
-.notice_event_content {
-    width: 551px;
-}
-
-#ne_content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    border-bottom: 1px solid #eee;
-}
-
-.notice_event_content p {
-    margin-top: 4px;
-    font-size: 14px;
-    margin-bottom: 10px;
-
-}
-
-#ne_date {
-    font-size: 13px;
-    color: #353535;
-}
-
-.tsm_banner {
-    width: 551px;
-    height: 159px;
-    margin-bottom: 102px;
-}
-
 
 /* ------------------------------------------------- footer -------------------------------------------------- */
 
 
 /* footer */
-
 footer {
     width: 100%;
     height: 170px;

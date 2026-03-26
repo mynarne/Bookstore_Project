@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href = 'sub.css' rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- header top -->
+        <div id = 'header_top'>
+            <div id = 'header_top_content'>
+                <!-- header top navigation -->
+                <nav id = 'ht_nav'>
+                    <ul>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">1:1 문의</a></li>
+                        <li><a href="#">개발자 문의</a></li>
+                        <li><a href="#">매입요청</a></li>
+                        <li><a href="#">도서요청</a></li>
+                        <li><a href="#">마이페이지</a></li>
+                        <li class = 'book_cart'><a href="#">장바구니</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- header bottom -->
+        <div id = 'header_bottom'>
+            <!-- logo -->
+             <div>
+                <a href = "../index.html"><img id = 'logo' src="./img/bold.svg" alt = 'logo'></a>
+             </div>
+            
+            <!-- header bottom search -->
+            <div id = 'hb_search'>
+                <select class = "search_category">
+                    <option value="all">통합검색</option>
+                    <option value="title">도서명</option>
+                    <option value="author">저자명</option>
+                    <option value="publisher">출판사명</option>
+                    <option value="ISBN">ISBN</option>
+                </select>
+                <input id = "search_book" type = "text">
+                <button id = "search_btn" type = "submit"><img id = "search_btn_icon" src="https://img.icons8.com/material-sharp/24/228BE6/search.png"/></button>
+            </div>
+
+            <!-- header bottom 회원수 -->
+            <div id = 'hb_member'>
+                <!-- 회원 수 -->
+                <div id = 'hb_member_element'>
+                    <img src="./img/nonecolorperson.png">
+                    
+                    <!-- 텍스트 그룹용 div -->
+                    <div id = 'hb_member_text_group'>
+                        <p>회원 수</p>
+                        <span id = 'mem_value'>9명</span>
+                    </div>
+                </div>
+                <!-- 전체 등록된 책  아이콘 출처 - Textbook icons created by meaicon - Flaticon   -->
+                <div id = 'hb_member_element'>
+                    <img src = './img/whitebook.png'>
+                    <!-- 텍스트 그룹용 div -->
+                    <div id = 'hb_member_text_group'>
+                        <p>전체 등록된 책</p>
+                        <span id = 'mem_value'>9999999권</span>
+                    </div>
+                    
+                </div>
+                <!-- 판매점 수 -->
+                <div id = 'hb_member_element'>
+                    <img src="./img/colorperson.png">
+                    
+                    <!-- 텍스트 그룹용 div -->
+                    <div id = 'hb_member_text_group'>
+                        <p>판매점 수</p>
+                        <span id = 'mem_value'>999999점</span>
+                    </div>
+                    
+                </div>
+                <!-- 어제 등록된 책 -->
+                <div id = 'hb_member_element'>
+                    <img src = './img/colorbook.png'>
+                    
+                    <!-- 텍스트 그룹용 div -->
+                    <div id = 'hb_member_text_group'>
+                        <p>어제 등록된 책</p>
+                        <span id = 'mem_value'>99권</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 메뉴, 실검 -->
+        <div id = "border_line">
+            <div class = 'main_menu_realtimesearch'>
+                <!-- 메뉴 -->
+                <div class = 'main_menu'>
+                    <ul>
+                        <li class = 'menu_search_genre'>
+                            <a href = "#" id="bookoa_blue">분야찾기</a>
+                            <ul class = 'sub_menu sub_genre'>
+                                <li><a href = '#'>소설</a></li>
+                                <li><a href = '#'>문학/인물</a></li>
+                                <li><a href = '#'>역사/철학/심리/교육</a></li>
+                                <li><a href = '#'>자기계발</a></li>
+                                <li><a href = '#'>경영/경제</a></li>
+                                <li><a href = '#'>만화</a></li>
+                                <li><a href = '#'>종교</a></li>
+                                <li><a href = '#'>취미</a></li>
+                                <li><a href = '#'>잡지</a></li>
+                                <li><a href = '#'>역사/문화</a></li>
+                                <li><a href = '#'>가정/건강</a></li>
+                                <li><a href = '#'>사회/정치/법/과학</a></li>
+                                <li><a href = '#'>전문서적</a></li>
+                                <li><a href = '#'>외국어</a></li>
+                                <li><a href = '#'>외국도서/원서</a></li>
+                                <li><a href = '#'>유아</a></li>
+                                <li><a href = '#'>아동/초등</a></li>
+                                <li><a href = '#'>청소년</a></li>
+                                <li><a href = '#'>중학생</a></li>
+                                <li><a href = '#'>고등학생</a></li>
+                                <li><a href = '#'>대학생</a></li>
+                                <li><a href = '#'>취업/자격증/시험</a></li>
+                                <li><a href = '#'>영화/음반</a></li>
+                                <li><a href = '#'>사전/전집</a></li>
+                                <li><a href = '#'>컴퓨터</a></li>
+                                <li><a href = '#'>고서/희귀본</a></li>
+                                <li><a href = '#'>성인</a></li>
+                                <li><a href = '#'>기타</a></li>
+                            </ul>
+                        </li>
+                        <li class = 'menu_price_conner'>
+                            <a href = "#" id="bookoa_red">가격대별코너</a>
+                            <ul class = 'sub_menu sub_price'>
+                                <li><a href = '#'>1천원대</a></li>
+                                <li><a href = '#'>2천원대</a></li>
+                                <li><a href = '#'>3천원대</a></li>
+                                <li><a href = '#'>4천원대</a></li>
+                                <li><a href = '#'>5천원 이상</a></li>
+                            </ul>
+                        </li>
+                        <li class = 'menu_event'>
+                            <a href = "#" id="bookoa_blue">이벤트</a>
+                            <ul class = 'sub_menu sub_event'>
+                                <li><a href = '#'>이벤트 공지</a></li>
+                                <li><a href = '#'>이벤트 발표</a></li>
+                                <li><a href = '#'>인증게시판</a></li>
+                                <li><a href = '#'>자유게시판</a></li>
+                                <li><a href = '#'>글쓰기</a></li>
+                            </ul>
+                        </li>
+                        <li class = 'menu_certi_store'>
+                            <a href = "#" id="bookoa_blue">
+                                <img src = './img/verify.png'>인증서점
+                            </a>
+                        </li>
+                        <li class = 'menu_my_store'>
+                            <a href = "#" id="bookoa_blue">나의서점</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 실검 -->
+                <div class = 'realtimesearch'>
+                    <p>실시간 인기 검색어</p>
+                    <div class = 'rts_wrap'>
+                        <ul class = 'rts_list'>
+                            <li><span>1.</span>나루토</li>
+                            <li><span>2.</span>원피스</li>
+                            <li><span>3.</span>비질랜티</li>
+                            <li><span>4.</span>주술회전</li>
+                            <li><span>5.</span>체인소맨</li>
+                            <li><span>6.</span>스파이패밀리</li>
+                            <li><span>7.</span>강철의연금술사</li>
+                            <li><span>8.</span>진격의거인</li>
+                            <li><span>9.</span>에반게리온</li>
+                            <li><span>10.</span>불꽃소방대</li>
+                        </ul>
+                    </div>
+                    <button id = "rts_btn" type = "submit"><img id = "search_btn_icon" src="https://img.icons8.com/material-sharp/24/228BE6/search.png"/></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class = 'sub_header'>
+        <div class = 'sh_main'>
+            <!-- sub header logo -->
+            <a href = "index.html"><img id = 'sh_logo' src="./img/bold.svg"></a>
+            
+            <!-- 오른쪽 -->
+            <div class = 'icon_pack'>
+                <img src="./img/person.png">
+                <img src="./img/shopping-bag.png">
+                <img src="./img/zoom.png">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 오른쪽 하단 리모콘 -->
+    <div class = 'right_remote'>
+        <div class = 'remote_group'>
+            <img id = 'q_mark' src="./img/question.png">
+            <img id = 'to_top' src="./img/top.png">
+            <img id = 'kakao' src="./img/kakao.png">
+        </div>
+    </div>
+
+
+    <!-- 아이콘, 제목, 저자, 출판사, 출간일, 상품등록일 -->
+    <div class = 'top'>
+        <div class = 'top_grade'>
+            <div class = 'tg_left'>
+                <p>등급</p>
+            </div>
+            <div class = 'tg_right'>
+                <a href = '#'><p>품질 등급 체크</p></a>
+            </div>
+        </div>
+        <p class = 'top_title'>제목</p>
+        <ul class = 'tg_ul'>
+            <li class = 'tg_li'>저자</li>
+
+            <li class = 'tg_li'>출판사</li>
+
+            <li class = 'tg_li'>출간일</li>
+
+            <li class = 'tg_li'>상품등록일</li>
+        </ul>
+    </div>
+
+    <!-- 책 정보 -->
+    <div class = 'book_info'>
+        
+        <div class = 'book_info_shape'>
+            <!-- 이미지 -->
+            <img class = 'book_info_img'>
+
+            <!-- 분류 및 가격 -->
+            <div class = 'book_info_content'>
+                <!-- 좌측 -->
+                <div class = 'bic_key'>
+                    <p>카테고리</p>
+                    <p>ISBN</p>
+                    <p>판매가</p>
+                    <p>정가</p>
+                    <p>배송비</p>
+                </div>
+
+                <!-- 우측 -->
+                <div class = 'bic_value'>
+                    <p>카테고리 내용</p>
+                    <p>ISBN 내용</p>
+                    <p>가격</p>
+                    <p>정가 내용</p>
+                    <p>배송비 내용</p>
+                </div>
+
+                <!-- max min avg 테이블 -->
+                <table class="bic_table">
+                    <tr>
+                        <td>최고가</td>
+                        <td>평균가</td>
+                        <td>최저가</td>
+                    </tr>
+                    <tr>
+                        <td>1,000원</td>
+                        <td>1,500원</td>
+                        <td>10,000원</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- 상세정보 -->
+    <div class = 'main_info'>
+        <!-- main_info 좌측 -->
+        <div class = 'mi_key'>
+            <!-- 판매자 책설명 -->
+            <div class = 'mk_seller_intro'>
+                <h3>판매자 책설명</h3>
+            </div>
+            <!-- 책소개 -->
+            <div class = 'mk_intro'>
+                <h3>책소개</h3>
+            </div>
+            <!-- 판매자 -->
+            <div class = 'mk_seller'>
+                <h3>판매자</h3>
+            </div>
+            <!-- 북코아 안내사항 -->
+            <div class = 'mk_bookoa_notice'>
+                <h3>북코아 안내사항</h3>
+            </div>
+        </div>
+        <!-- main_info 우측 -->
+        <div class = 'mi_value'>
+            <!-- 판매자 책설명 내용 -->
+            <div class = 'mv_seller_intro'>
+                <p>안녕하세요</p>
+            </div>
+            <!-- 책소개 내용 -->
+            <div class = 'mv_intro'>
+                <p>책소개</p>
+            </div>
+            <!-- 판매자 내용 -->
+            <div class = 'mv_seller'>
+                <div class = 'mvs_title'>
+                    <div class = 'mvst_left'>
+                        <div class = 'mvs_icon'>
+                            <p>사업자</p>
+                        </div>
+                        <a href = '#'>판매점 이름</a>
+                    </div>
+                    <div class = 'mvst_right'>
+                        <a href = '#'>판매점으로 문의하기</a>
+                    </div>
+                </div>
+                <table class = 'mvs_table'>
+                    <tr>
+                        <td>배송비</td>
+                        <td>2,990원</td>
+                        <td>배송방법</td>
+                        <td>일반택배 (평균 1.1일)</td>
+                    </tr>
+                    <tr>
+                        <td>거래실적</td>
+                        <td colspan = '3'>거래량 정보</td>
+                    </tr>
+                    <tr>
+                        <td>배송정책</td>
+                        <td colspan = '3'>구매가격에 따라 배송비 무료, 책 주문가격이 총 30,000원 이상이면 배송비 무료</td>
+                    </tr>
+                    <tr>
+                        <td>군부대<br>배송여부</td>
+                        <td colspan = '3'>군부대(사서함) 주문건 배송가능</td>
+                    </tr>
+                    <tr>
+                        <td>환불, 반품,<br>교환조건</td>
+                        <td colspan = '3'>북코아 약관에 따름. (배달된 도서가 주문 상품과 다를 경우는 반품 및 환불합니다.)</td>
+                    </tr>
+                </table>
+                <!-- 판매자 추천 도서 -->
+                <div>
+                </div>
+
+            </div>
+            <!-- 북코아 안내사항 내용 -->
+            <div class = 'mv_bookoa_notice'>
+                <p>1. 주문 전 상품의 정확한 상태 및 재고 문의는 [판매점으로 문의하기]를 통해 문의 부탁드립니다.</p>
+                <p>2. 북코아에서 판매되는 중고상품의 취소 및 반품은 판매자와 별도 협의 후 진행 가능합니다.</p>
+                <p>3. 북코아에 등록된 판매 상품과 제품의 상태는 판매자들이 직접 등록 및 판매하는 것으로, 중개시스템만 제공하는 북코아는 판매 상품과 내용에 대해 일체 책임지지 않습니다.</p>
+                <p>4. 북코아 결제 시스템을 이용하지 않은 직거래로 인한 피해 발생 시 북코아는 일체 책임지지 않습니다.</p>
+                <p>5. ISBN으로 등록된 도서 이미지 및 정가는 실제와 다를 수 있습니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 북코아 추천도서 -->
+    <div>
+
+    </div>
+
+    <!-- 하단 구매 버튼 fixed -->
+    <div class = 'buy_group'>
+        <div class = 'bg_main'>
+            <div>
+                <div>
+                    <p>수량</p>
+                </div>
+                <div>
+                    버튼 갯수 버튼
+                </div>
+            </div>
+            <div>
+                <div>
+                    <p>결제예정금액</p>
+                </div>
+                <div>
+                    가격
+                </div>
+            </div>
+            <div>
+                <div>
+                    장바구니버튼
+                </div>
+                <div>
+                    바로구매버튼
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class = 'footer_content_main'>
+            <div class = 'footer_content_left'>
+                <ul>
+                    <li>회사소개</li>
+                    <li><a href = '#'>개인정보취급방침</a></li>
+                    <li><a href = '#'>이용약관</a></li>
+                    <li><a href = '#'>고객센터</a></li>
+                </ul>
+
+                <p>
+                    Copyright 2022 북코아. All rights reserverd <span>[사업자정보]</span> 대표전화 : 1544-2949 | 대표 : 박재용 | 개인정보 보호책임자 : 박재용 사업자 등록번호 : 257-08-02667 | 통신판매업 신고번호 : 제 2024-인천남동구-0150호. 인천시 남동구 남동대로 709, 4층(구월동,보광빌딩) | Email : help@bookoa.com
+                </p>
+            </div>
+            <div class = 'footer_content_right'>
+                <p>고객만족센터</p>
+                <div class = 'tel_cuns'>
+                    <p id ='tel'>1544-2949</p>
+                    <a href = '#' class = 'cuns_btn'>상담시간 안내</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 상담시간 안내 눌렀을 때 나올 안내 -->
+    <div class = 'modal'>
+        <div class = 'cuns_notice_main'>
+            <div class = 'cuns_notice_title'>
+                <p>상담시간 안내</p>
+                <button class = 'cuns_notice_close_btn'><img src = './img/close.png'></button>
+            </div>
+            <div class = 'cuns_notice_content'>
+                <p><b>상담시간</b></p>
+                <ul>
+                    <li>■ 평일 오전 9시 ~ 오후 6시</li>
+                    <li>■ 점심시간 : 오후 12시 30분 ~ 오후 1시 30분</li>
+                    <li>■ *매달 첫째주 금요일 점심시간 : 오후 12시 ~ 오후 2시</li>
+                    <li>■ *매달 마지막주 수요일 : 오전 9시 ~ 오후 1시</li>
+                    <li>■ 휴무일 : 토, 일 공휴일 휴무</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src = 'book.js'></script>
+    <script src = 'js.js'></script>
+</body>
+</html>
