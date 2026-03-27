@@ -61,17 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
     startRolling();
 });
 
-
-/* const searchCategory = function() {
-    const sccategory = document.querySelector('.search_category');
-    const container = document.querySelector('#hb_search');
-
-    function categoryList() {
-        
-    }
-} */
-
-
 // sub header
 
 const subHeader = document.querySelector('.sub_header');
@@ -108,4 +97,3 @@ openBtn.onclick = function(e) {
 closeBtn.onclick = function() {
     modal.style.display = 'none';
 }
-

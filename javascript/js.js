@@ -109,3 +109,8 @@ closeBtn.onclick = function() {
     modal.style.display = 'none';
 }
 
+
+// 서브로 연결
+function goToDetail(isbn) {
+    location.href = `sub.html?isbn=${isbn}`;
+}

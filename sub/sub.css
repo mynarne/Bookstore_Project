@@ -399,8 +399,12 @@ header {
     justify-content: flex-start;
 }
 
-.menu_price_conner:hover .sub_price li a {
+.menu_price_conner:hover .sub_price li {
     margin-right: 60px;
+    width: max-content;
+}
+
+.menu_price_conner:hover .sub_price li a{ 
     text-decoration: none;
     color: #4b4b4b;
     font-size: 14px;
@@ -697,14 +701,14 @@ header {
 
 .main_info {
     width: 1140px;
-    height: 1400px;
+    height: 1510px;
     margin: 0 auto;
     display: flex;
 }
 
 .mi_key {
     width: 20%;
-    height: 1200px;
+    height: 1400px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -712,22 +716,32 @@ header {
 
 .mk_seller_intro {
     height: 120px;
-    margin-left: 28px;
+    margin-left: 30px;
+    margin-top : 10px;
     display: flex;
     align-items: center;
 }
 
 .mk_intro {
     height: 120px;
-    margin-left: 28px;
+    margin-left: 30px;
+    margin-top: 50px;
     display: flex;
     align-items: center;
 }
 
 .mk_seller {
-    height: 660px;
-    margin-left: 28px;
-    margin-top: 70px;
+    height: 1100px;
+    margin-left: 30px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.mk_bookoa_notice{
+    height: 350px;
+    margin-left: 39px;
+    margin-top: 80px;
     display: flex;
     justify-content: flex-start;
 }
@@ -765,7 +779,7 @@ header {
 
 .mv_seller {
     width: 850px;
-    height: 600px;
+    height: 800px;
     margin-left: 63px;
     margin-top: 70px;
     display: flex;
@@ -779,6 +793,7 @@ header {
     width: 800px;
     height: 25px;
     margin-left: 30px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -789,16 +804,14 @@ header {
     align-items: center;
 }
 
-.mvst_right {
-
-}
+/* mvst_right div에 css 부여x */
 
 .mvs_icon {
     width: 60px;
     height: 22px;
     margin-right: 10px;
     text-align: center;
-    padding-top: 2px;
+    padding-top: 1.5px;
     font-size: 12px;
     background-color: #237AF6;
     font-weight: 800;
@@ -830,10 +843,11 @@ header {
 }
 
 .mvs_table {
-    width: 750px;
+    width: 800px;
     border-collapse: collapse;
     color: #444444;
-    
+    margin-left: 30px;
+    margin-bottom: 10px;
 }
 
 .mvs_table td:nth-child(2) {
@@ -845,24 +859,160 @@ header {
 .mvs_table td:nth-child(1),
 .mvs_table tr:nth-child(1) td:nth-child(3) {
     background-color: #fafafa;
-    font-weight: bold;
     text-align: left;
-    padding-left: 15px
+    padding-left: 15px;
 }
 
-.mvs_table tr:nth-child(1) td:nth-child(4) {
-    color: black;
+.mvs_table tr:nth-child(1) td:nth-child(3) {
+    padding: 0;
+    text-align: center;
 }
 
 .mvs_table td {
     border-top: 1px solid #dedede;
     border-bottom: 1px solid #dedede;
     color: #444444;
-    padding: 18px 0;
-    word-wrap: break-word;
-    word-break: keep-all;
+    padding: 15px 30px;
     line-height: 1.5;
 }
+
+
+/* 판매자 판매 중인 다른 책 */
+.seller_anotherbook {
+    display: flex;
+    width: 860px;
+    margin-left: 30px;
+    justify-content: space-between;
+}
+
+.sa_book {
+    width: 800px;
+}
+
+.sa_book a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 17px;
+    color: black;
+}
+
+.sa_book_img {
+    width: 110px;
+    height: 150px;
+    border: 1px solid salmon;
+}
+
+.sa_book_text {
+    width: 110px;
+    height: 124px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    font-size: 15px;
+}
+
+.sa_book_title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+ 
+/* 북코아 안내사항 */
+.mv_bookoa_notice {
+    width: 850px;
+    height: 350px;
+    margin-left: 63px;
+    margin-top: 50px;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.mvbn_content {
+    width: 700px;
+    height: 270px;
+    margin-left: 37px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mvbn_content p {
+    
+}
+
+
+/* 북코아 추천도서 */
+.bookoa_recommend {
+    width: 100%;
+    height: 450px;
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.br_title {
+    width: 1140px;
+    padding: 0;
+    height: max-content;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+.br_title h2 {
+    margin-left: 28px;
+    margin-top: 50px;
+}
+
+.br_content {
+    width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.br_book_group {
+    width: 1100px;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.br_book {
+    margin-right: 20px;
+}
+
+.br_book a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 17px;
+    color: black;
+}
+
+.br_book_img {
+    width: 130px;
+    height: 176px;
+}
+
+.br_book_text {
+    width: 110px;
+    height: 124px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 8px;
+    font-size: 15px;
+}
+
+.br_book_title {
+    padding-bottom: 2px;
+}
+
+.br_book_text p:nth-child(2) {
+    color: #606060;
+    font-size: 12.5px;
+}
+
+
 
 /* ------------------------------------------------- footer -------------------------------------------------- */
 
@@ -872,6 +1022,7 @@ footer {
     width: 100%;
     height: 170px;
     padding: 20px 0;
+    margin-bottom: 70px;
     
     display: flex;
     justify-content: space-between;
@@ -974,6 +1125,119 @@ footer ul {
     padding: 6px 4px 6px 4px;
     text-decoration: none;
 }
+
+
+
+/* 하단 구매 버튼 */
+.buy_group {
+    width: 100%;
+    height: 80px;
+    background-color: #FAFAFA;
+    z-index: 99999;
+    position: fixed;
+    bottom: 0;
+}
+
+.bg_main {
+    width: 900px;
+    margin: 0 auto;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bgm_left {
+    display: flex;
+    align-items: center;
+    width: 250px;
+}
+
+.bgml_text {
+    margin-right: 35px;
+}
+
+.bgml_btn_group {
+    display: flex;
+    align-items: center;
+}
+
+.bgml_btn_group button {
+    background-color: transparent;
+    border: 1px solid #dedede;
+    width: 35px;
+    height: 35px;
+}
+
+.bgml_btn_group button:nth-child(1) img {
+    width: 15px;
+    height: 15px;
+    margin: 0 auto;
+    margin-top: 3.5px;
+}
+
+.bgml_btn_group button:nth-child(3) img {
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+}
+
+.bgml_btn_group p {
+    margin: 0 33px;
+}
+
+.bgm_center {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bgmc_left {
+
+}
+
+.bgmc_right{
+
+}
+
+.bgm_right {
+    width: 280px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.bgmc_right p span {
+    font-size: 22px;
+    font-weight: bold;
+    color: #237AF6;
+}
+
+.bgmr_bag {
+    width: 100px;
+    height: 50px;
+    background-color: #5d5d5d;
+    text-align: center;
+}
+
+.bgmr_buy {
+    width: 180px;
+    height: 50px;
+    background-color: #237AF6;
+    text-align: center;
+}
+
+ .bgmr_bag p,
+ .bgmr_buy p {
+    font-weight: bold;
+    margin-top: 13px;
+}
+
+.bgmr_bag p a,
+ .bgmr_buy p a {
+    text-decoration: none;
+    color: white;
+ }
 
 
 /* ---------------------------------- 상담시간 안내 눌렀을 때 ---------------------------------------- */

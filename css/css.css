@@ -650,12 +650,12 @@ section {
     color: black;
 }
 
-#new_book_img {
+.new_book_img {
     width: 130px;
     height: 176px;
 }
 
-#new_book_text {
+.new_book_text {
     width: 130px;
     height: 124px;
     display: flex;
@@ -733,12 +733,12 @@ section {
     color: black;
 }
 
-#price_book_img {
+.price_book_img {
     width: 130px;
     height: 176px;
 }
 
-#price_book_text {
+.price_book_text {
     width: 130px;
     height: 124px;
     display: flex;
