@@ -112,5 +112,5 @@ closeBtn.onclick = function() {
 
 // 서브로 연결
 function goToDetail(isbn) {
-    location.href = `sub.html?isbn=${isbn}`;
+    location.href = `./sub/sub.html?isbn=${isbn}`;
 }
