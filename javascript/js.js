@@ -91,9 +91,9 @@ window.addEventListener('scroll', function() {
 
 
 
-// modal
+// modal_cuns
 
-const modal = document.querySelector('.modal');
+const modal = document.querySelector('.modal_cuns');
 const openBtn = document.querySelector('.cuns_btn');
 const closeBtn = document.querySelector('.cuns_notice_close_btn');
 

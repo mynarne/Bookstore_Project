@@ -40,13 +40,23 @@ async function loadData(title) {
         bookImg.src = bookData.thumbnail || 'no_image.png'; // 이미지 없으면 기본이미지
         bookImg.alt = bookData.title;
 
-        // 3. 분류 및 가격 상세 (오른쪽 bic_value 부분)
+        // 3. 분류 및 가격 상세
         const detailValues = document.querySelectorAll('.bic_value p');
         detailValues[0].textContent = "국내도서 > 소설";
         detailValues[1].textContent = bookData.isbn;
         detailValues[2].textContent = `${bookData.sale_price.toLocaleString()}원`;
         detailValues[3].textContent = `${bookData.price.toLocaleString()}원`;
         detailValues[4].textContent = "3,000원";
+
+        // 4. 테이블 최고가, 평균가, 최저가 출력
+        const tablePrices = document.querySelectorAll('.bic_table tr:nth-child(2) td');
+        tablePrices[0].textContent = `${bookData.price.toLocaleString()}원`;
+        tablePrices[1].textContent = `${((bookData.price + bookData.sale_price)/2).toLocaleString()}원`
+        tablePrices[2].textContent = `${bookData.sale_price.toLocaleString()}원`;
+
+        // 5. 하단 고정 테이블 결제 예정 금액
+        const bottomPrice = document.querySelectorAll('.bgmc_right p span');
+        bottomPrice[0].textContent = `${(bookData.sale_price + 3000).toLocaleString()}`;
 
     } catch (error) {
         console.error(`데이터 로딩 중 에러 발생: ${error}`);
@@ -64,11 +74,11 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
-async function loadData2(author = '작가') {
+async function loadData2(genre) {
     const REST_API_KEY = "dcd4417706d218dbe42babf0a06ebfde";
     
     const params = new URLSearchParams({
-        query: author,
+        query: genre,
         size: 5
     });
 
@@ -87,24 +97,24 @@ async function loadData2(author = '작가') {
         }
 
         const jsonData = await response.json();
-        const bookElements1 = document.querySelectorAll('.sa_book');
+        const bookElements2 = document.querySelectorAll('.sa_book');
         
 
-        bookElements1.forEach((book, i) => {
-            const bookData1 = jsonData.documents[i];
+        bookElements2.forEach((book, i) => {
+            const bookData2 = jsonData.documents[i];
 
-            if (!bookData1) {
+            if (!bookData2) {
                 return;
             }
             
             book.innerHTML = `
                 <a href = '#'>
                     <div class = 'sa_book_img'>
-                        <img src="${bookData1.thumbnail}" alt="${bookData1.title} 표지">
+                        <img src="${bookData2.thumbnail}" alt="${bookData2.title} 표지">
                     </div>
                     <div class="sa_book_text">
-                        <p class="sa_book_title">${bookData1.title}</p>
-                        <p><b>${bookData1.price.toLocaleString()}원</b></p>
+                        <p class="sa_book_title">${bookData2.title}</p>
+                        <p><b>${bookData2.price.toLocaleString()}원</b></p>
                     </div>
                 </a>
             `;
@@ -115,7 +125,7 @@ async function loadData2(author = '작가') {
     }
 }
 
-loadData2('작가');
+loadData2('나루토');
 
 async function loadData3(keyword = '베스트셀러') {
     const REST_API_KEY = "dcd4417706d218dbe42babf0a06ebfde";
@@ -140,24 +150,24 @@ async function loadData3(keyword = '베스트셀러') {
         }
 
         const jsonData = await response.json();
-        const bookElements1 = document.querySelectorAll('.br_book');
+        const bookElements3 = document.querySelectorAll('.br_book');
         
 
-        bookElements1.forEach((book, i) => {
-            const bookData1 = jsonData.documents[i];
+        bookElements3.forEach((book, i) => {
+            const bookData3 = jsonData.documents[i];
 
-            if (!bookData1) {
+            if (!bookData3) {
                 return;
             }
             
             book.innerHTML = `
                 <a href = '#'>
                     <div class = 'br_book_img'>
-                        <img src="${bookData1.thumbnail}" alt="${bookData1.title} 표지">
+                        <img src="${bookData3.thumbnail}" alt="${bookData3.title} 표지">
                     </div>
                     <div class="br_book_text">
-                        <p class="br_book_title">${bookData1.title}</p>
-                        <p>${bookData1.authors.toLocaleString()}</p>
+                        <p class="br_book_title">${bookData3.title}</p>
+                        <p>${bookData3.authors.toLocaleString()}</p>
                     </div>
                 </a>
             `;

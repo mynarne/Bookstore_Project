@@ -617,8 +617,10 @@ section {
     width: max-content;
     position: relative;
     margin: 0 9px;
-    
-    /* rgb(227, 227, 151); */
+}
+
+.nbm_nav_list li:nth-child(1) {
+    background: linear-gradient(to top, rgb(242, 242, 28), transparent 50%);
 }
 
 .new_book_menu ul a {
@@ -746,7 +748,7 @@ section {
     padding-top: 20px;
 }
 
-#pbm_nav {
+.pbm_nav {
     width: 313px;
     height: 36px;
     
@@ -757,12 +759,16 @@ section {
     font-weight: 500;
 }
 
-#pbm_nav ul {
+.pbm_nav ul {
     display: flex;
 }
 
-#pbm_nav ul li {
+.pbm_nav ul li {
     margin: 0 7px;
+}
+
+.pbm_nav ul li:nth-child(1) {
+    background: linear-gradient(to top, rgb(242, 242, 28), transparent 50%);
 }
 
 .price_book_menu ul a {
@@ -807,7 +813,7 @@ section {
     margin-bottom: 5px;
 }
 
-#csc_nav {
+.csc_nav {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -816,14 +822,19 @@ section {
     margin-right: 20px;
 }
 
-#csc_nav ul {
+.csc_nav ul {
     display: flex;
     
 }
 
-#csc_nav ul li {
+.csc_nav ul li {
     margin: 0 4px;
 }
+
+.csc_nav ul li:nth-child(1) {
+    background: linear-gradient(to top, rgb(242, 242, 28), transparent 50%);
+}
+
 
 .certi_store_menu ul a {
     text-decoration: none;
@@ -879,6 +890,7 @@ section {
     border: 1px solid #ddd;
     background: #fff;
     cursor: pointer;
+    content: '•'
 }
 
 /* ---------------------------------------------- 공지사항 이벤트 ---------------------------------------------------- */

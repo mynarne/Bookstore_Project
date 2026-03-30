@@ -328,7 +328,7 @@
                 <!-- 가격대별 코너 제목, 메뉴, 더보기 -->
                 <div class = 'price_book_menu'>
                     <h2>가격대별 코너</h2>
-                    <nav id = 'pbm_nav'>
+                    <nav class = 'pbm_nav'>
                         <ul>
                             <li><a href = "#" id = "bookoa_gray">1천원대</a></li>
                             <li><a href = "#" id = "bookoa_gray">2천원대</a></li>
@@ -459,7 +459,7 @@
                 <!-- 인증서점 제목, 메뉴, 더보기-->
                 <div class = 'certi_store_menu'>
                     <h2>인증서점</h2>
-                    <nav id = 'csc_nav'>
+                    <nav class = 'csc_nav'>
                         <ul>
                             <li><a href = "#" id = "bookoa_gray">이주의 서점</a></li>
                             <li><a href = "#" id = "bookoa_gray">신규 서점</a></li>
@@ -468,8 +468,15 @@
                     <a href = "#" class = "more_view" id="bookoa_gray">더보기</a>
                 </div>
                 <div class = 'certi_store_content' id = 'store_list'>
-                    
+                    <!-- 서점 리스트 여기 들어감 -->
+
                 </div>
+                <div class="store_pagination">
+                        <button class="page_btn active">1</button>
+                        <button class="page_btn">2</button>
+                        <button class="page_btn">3</button>
+                </div>
+                
                 <!-- 서점 리스트 -->
                 <!-- <div class = 'certi_store_content'>
                     <div class = 'certi_store'>
@@ -524,11 +531,6 @@
                     </div>
                 </div> -->
 
-                <div class="store_pagination">
-                        <button class="page_btn active">1</button>
-                        <button class="page_btn">2</button>
-                        <button class="page_btn">3</button>
-                </div>
             </div>
         </div>
 
@@ -611,8 +613,16 @@
         </div>
     </footer>
 
+
+    <div>
+        <div>
+
+        </div>
+    </div>
+
+
     <!-- 상담시간 안내 눌렀을 때 나올 안내 -->
-    <div class = 'modal'>
+    <div class = 'modal_cuns'>
         <div class = 'cuns_notice_main'>
             <div class = 'cuns_notice_title'>
                 <p>상담시간 안내</p>
