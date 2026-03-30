@@ -28,11 +28,14 @@ async function loadData(title) {
         }
 
         document.querySelector('.top_title').textContent = bookData.title;
+
+        const getDate = bookData.datetime.substring(0, 10).split('-');
+        const setDate = `${getDate[0]}년 ${getDate[1]}월 ${getDate[2]}일`
         
         const infoList = document.querySelectorAll('.tg_li');
         infoList[0].textContent = `저자 ${bookData.authors.join(', ')}`;
         infoList[1].textContent = `출판사 ${bookData.publisher}`;
-        infoList[2].textContent = `출간일 ${bookData.datetime.substring(0, 10)}`;
+        infoList[2].textContent = `출간일 ${setDate}`;
         infoList[3].textContent = "상품등록일 2026년 03월 27일";
 
         // 2. 책 이미지
