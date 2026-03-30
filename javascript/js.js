@@ -62,16 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-/* const searchCategory = function() {
-    const sccategory = document.querySelector('.search_category');
-    const container = document.querySelector('#hb_search');
-
-    function categoryList() {
-        
-    }
-} */
-
-
 // sub header
 
 const subHeader = document.querySelector('.sub_header');
