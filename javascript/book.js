@@ -32,7 +32,7 @@ async function loadData(genre = '소설') {
             }
             
             book.innerHTML = `
-                <a href = '/sub/sub.html?title=${bookData1.title}'>
+                <a href = './sub/sub.html?title=${bookData1.title}'>
                     <img class="new_book_img" src="${bookData1.thumbnail}" alt="${bookData1.title} 표지">
                     <div class="new_book_text">
                         <p class="new_book_title">${bookData1.title}</p>
