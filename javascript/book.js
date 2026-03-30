@@ -48,7 +48,7 @@ async function loadData(genre = '소설') {
 }
 
 async function loadSubPage(isbn) {
-    const response = await fetch('../sub/sub.html');
+    const response = await fetch('./sub/sub.html');
     const htmlText = await response.text();
 
     document.querySelector('.main_container').innerHTML = htmlText;
